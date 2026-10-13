@@ -1,4 +1,4 @@
-# adrianchen8662.github.io
+# adrianchen8662.fyi
 
 Adrian Chen's personal website, built with [Astro](https://astro.build), using React for the interactive parts, and hosted on Cloudflare.
 
