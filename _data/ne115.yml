@@ -1,0 +1,1584 @@
+# The Northeast 115: every 4,000-foot peak on the Northeast 111 Club's list.
+# Read by src/components/NE115.astro for the travel post "Chasing the Northeast 115".
+#
+# To log a hike, change a peak's status and add the day you climbed it:
+#   status: hiked
+#   date: 2026-10-04
+#
+# Fields
+#   name, state (NH, ME, VT or NY), list, range, park   what and where
+#   elevation                                           summit, in feet
+#   route, miles, gain, trail                           a standard route (round trip, feet of climbing). Approximate:
+#                                                       real routes vary, and several peaks share one outing.
+#   trail                                               marked = maintained trail to the summit; unmarked = herd path or bushwhack
+#   also                                                other peaks on the same route (optional)
+#   lat, lon                                            summit, in decimal degrees (approximate)
+#   status, date                                        to-hike or hiked; the date is optional
+
+- name: "Mount Washington"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Presidential Range"
+  park: "White Mountain National Forest"
+  elevation: 6288
+  route: "Tuckerman Ravine Trail from Pinkham Notch"
+  miles: 8.4
+  gain: 4250
+  trail: marked
+  lat: 44.2705
+  lon: -71.3033
+  status: to-hike
+- name: "Mount Adams"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Presidential Range"
+  park: "White Mountain National Forest"
+  elevation: 5774
+  route: "Air Line and Valley Way loop from Appalachia"
+  miles: 9.0
+  gain: 4500
+  trail: marked
+  also: "Madison is nearby"
+  lat: 44.3206
+  lon: -71.2914
+  status: to-hike
+- name: "Mount Jefferson"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Presidential Range"
+  park: "White Mountain National Forest"
+  elevation: 5712
+  route: "Caps Ridge Trail from Jefferson Notch Road"
+  miles: 5.0
+  gain: 2650
+  trail: marked
+  lat: 44.3042
+  lon: -71.3169
+  status: to-hike
+- name: "Mount Monroe"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Presidential Range"
+  park: "White Mountain National Forest"
+  elevation: 5384
+  route: "Ammonoosuc Ravine and Crawford Path"
+  miles: 7.8
+  gain: 3100
+  trail: marked
+  lat: 44.2556
+  lon: -71.3206
+  status: to-hike
+- name: "Mount Madison"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Presidential Range"
+  park: "White Mountain National Forest"
+  elevation: 5367
+  route: "Valley Way from Appalachia"
+  miles: 8.2
+  gain: 4000
+  trail: marked
+  also: "Adams is nearby"
+  lat: 44.3288
+  lon: -71.2768
+  status: to-hike
+- name: "Mount Lafayette"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Franconia Ridge"
+  park: "White Mountain National Forest"
+  elevation: 5249
+  route: "Franconia Ridge Loop: Falling Waters and Old Bridle Path"
+  miles: 8.9
+  gain: 3900
+  trail: marked
+  also: "Lincoln is on the same loop"
+  lat: 44.1607
+  lon: -71.6444
+  status: to-hike
+- name: "Mount Lincoln"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Franconia Ridge"
+  park: "White Mountain National Forest"
+  elevation: 5089
+  route: "Franconia Ridge Loop: Falling Waters and Old Bridle Path"
+  miles: 8.9
+  gain: 3900
+  trail: marked
+  also: "Lafayette is on the same loop"
+  lat: 44.1489
+  lon: -71.6445
+  status: to-hike
+- name: "South Twin Mountain"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Twin Range"
+  park: "White Mountain National Forest"
+  elevation: 4902
+  route: "Gale River Trail and Garfield Ridge past Galehead Hut"
+  miles: 12.0
+  gain: 3800
+  trail: marked
+  also: "Galehead is on the way"
+  lat: 44.1875
+  lon: -71.5553
+  status: to-hike
+- name: "Carter Dome"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Carter–Moriah Range"
+  park: "White Mountain National Forest"
+  elevation: 4832
+  route: "Nineteen Mile Brook Trail and Carter Dome Trail"
+  miles: 10.4
+  gain: 3800
+  trail: marked
+  lat: 44.2673
+  lon: -71.1793
+  status: to-hike
+- name: "Mount Moosilauke"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Moosilauke"
+  park: "White Mountain National Forest"
+  elevation: 4802
+  route: "Gorge Brook Trail and Carriage Road loop"
+  miles: 7.5
+  gain: 2650
+  trail: marked
+  lat: 44.0245
+  lon: -71.8309
+  status: to-hike
+- name: "Mount Eisenhower"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Presidential Range"
+  park: "White Mountain National Forest"
+  elevation: 4780
+  route: "Edmands Path from Mount Clinton Road"
+  miles: 6.6
+  gain: 2700
+  trail: marked
+  lat: 44.2407
+  lon: -71.3502
+  status: to-hike
+- name: "North Twin Mountain"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Twin Range"
+  park: "White Mountain National Forest"
+  elevation: 4761
+  route: "North Twin Trail from Haystack Road"
+  miles: 8.6
+  gain: 3300
+  trail: marked
+  lat: 44.2023
+  lon: -71.5583
+  status: to-hike
+- name: "Mount Carrigain"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Carrigain"
+  park: "White Mountain National Forest"
+  elevation: 4700
+  route: "Signal Ridge Trail from Sawyer River Road"
+  miles: 10.0
+  gain: 3200
+  trail: marked
+  lat: 44.0936
+  lon: -71.4468
+  status: to-hike
+- name: "Mount Bond"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Pemigewasset Wilderness"
+  park: "White Mountain National Forest"
+  elevation: 4698
+  route: "Lincoln Woods Trail and Bondcliff Trail"
+  miles: 19.4
+  gain: 4500
+  trail: marked
+  also: "West Bond and Bondcliff are on the same day hike"
+  lat: 44.153
+  lon: -71.5312
+  status: to-hike
+- name: "Middle Carter Mountain"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Carter–Moriah Range"
+  park: "White Mountain National Forest"
+  elevation: 4610
+  route: "Imp Trail and Carter–Moriah Trail"
+  miles: 9.4
+  gain: 3900
+  trail: marked
+  also: "South Carter is on the same ridge"
+  lat: 44.3031
+  lon: -71.1673
+  status: to-hike
+- name: "West Bond"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Pemigewasset Wilderness"
+  park: "White Mountain National Forest"
+  elevation: 4540
+  route: "Lincoln Woods Trail and Bondcliff Trail"
+  miles: 19.4
+  gain: 4500
+  trail: marked
+  also: "Bond and Bondcliff are on the same day hike"
+  lat: 44.156
+  lon: -71.547
+  status: to-hike
+- name: "Mount Garfield"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Garfield"
+  park: "White Mountain National Forest"
+  elevation: 4500
+  route: "Garfield Trail from Gale River Road"
+  miles: 9.6
+  gain: 3100
+  trail: marked
+  lat: 44.187
+  lon: -71.6109
+  status: to-hike
+- name: "Mount Liberty"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Franconia Notch"
+  park: "White Mountain National Forest"
+  elevation: 4459
+  route: "Liberty Spring Trail and Osseo Trail loop"
+  miles: 10.0
+  gain: 3400
+  trail: marked
+  also: "Flume is on the same loop"
+  lat: 44.1158
+  lon: -71.6421
+  status: to-hike
+- name: "South Carter Mountain"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Carter–Moriah Range"
+  park: "White Mountain National Forest"
+  elevation: 4430
+  route: "Imp Trail and Carter–Moriah Trail"
+  miles: 10.8
+  gain: 4000
+  trail: marked
+  also: "Middle Carter is on the same ridge"
+  lat: 44.2897
+  lon: -71.1761
+  status: to-hike
+- name: "Wildcat Mountain"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Wildcat Ridge"
+  park: "White Mountain National Forest"
+  elevation: 4422
+  route: "Wildcat Ridge Trail from Pinkham Notch"
+  miles: 8.5
+  gain: 3300
+  trail: marked
+  also: "Wildcat D is on the same ridge"
+  lat: 44.2589
+  lon: -71.2014
+  status: to-hike
+- name: "Mount Hancock"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Hancock Notch"
+  park: "White Mountain National Forest"
+  elevation: 4420
+  route: "Hancock Loop Trail from the Kancamagus Highway"
+  miles: 9.8
+  gain: 2550
+  trail: marked
+  also: "South Hancock is on the same loop"
+  lat: 44.0837
+  lon: -71.4937
+  status: to-hike
+- name: "South Kinsman"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Kinsman Range"
+  park: "White Mountain National Forest"
+  elevation: 4358
+  route: "Lonesome Lake, Fishin' Jimmy and Kinsman Ridge trails"
+  miles: 10.0
+  gain: 3700
+  trail: marked
+  also: "North Kinsman is on the same ridge"
+  lat: 44.123
+  lon: -71.7367
+  status: to-hike
+- name: "Mount Field"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Willey Range"
+  park: "White Mountain National Forest"
+  elevation: 4340
+  route: "Avalon Trail and A–Z Trail from Crawford Notch"
+  miles: 6.4
+  gain: 2400
+  trail: marked
+  also: "Willey and Tom are on the same range"
+  lat: 44.1962
+  lon: -71.4345
+  status: to-hike
+- name: "Mount Osceola"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Osceola"
+  park: "White Mountain National Forest"
+  elevation: 4340
+  route: "Osceola Trail from Tripoli Road"
+  miles: 6.4
+  gain: 2200
+  trail: marked
+  also: "East Osceola is across the chimney"
+  lat: 44.0016
+  lon: -71.5356
+  status: to-hike
+- name: "Mount Flume"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Franconia Notch"
+  park: "White Mountain National Forest"
+  elevation: 4328
+  route: "Liberty Spring Trail and Osseo Trail loop"
+  miles: 10.0
+  gain: 3400
+  trail: marked
+  also: "Liberty is on the same loop"
+  lat: 44.109
+  lon: -71.6279
+  status: to-hike
+- name: "South Hancock"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Hancock Notch"
+  park: "White Mountain National Forest"
+  elevation: 4319
+  route: "Hancock Loop Trail from the Kancamagus Highway"
+  miles: 9.8
+  gain: 2550
+  trail: marked
+  also: "North Hancock is on the same loop"
+  lat: 44.0765
+  lon: -71.4985
+  status: to-hike
+- name: "Mount Pierce"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Presidential Range"
+  park: "White Mountain National Forest"
+  elevation: 4310
+  route: "Crawford Path from Crawford Depot"
+  miles: 6.4
+  gain: 2350
+  trail: marked
+  lat: 44.2265
+  lon: -71.366
+  status: to-hike
+- name: "North Kinsman"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Kinsman Range"
+  park: "White Mountain National Forest"
+  elevation: 4293
+  route: "Lonesome Lake, Fishin' Jimmy and Kinsman Ridge trails"
+  miles: 10.0
+  gain: 3700
+  trail: marked
+  also: "South Kinsman is on the same ridge"
+  lat: 44.135
+  lon: -71.735
+  status: to-hike
+- name: "Mount Willey"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Willey Range"
+  park: "White Mountain National Forest"
+  elevation: 4285
+  route: "Avalon Trail, A–Z Trail and Willey Range Trail"
+  miles: 8.0
+  gain: 2900
+  trail: marked
+  also: "Field and Tom are on the same range"
+  lat: 44.1833
+  lon: -71.4167
+  status: to-hike
+- name: "Bondcliff"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Pemigewasset Wilderness"
+  park: "White Mountain National Forest"
+  elevation: 4265
+  route: "Lincoln Woods Trail and Bondcliff Trail"
+  miles: 19.4
+  gain: 4500
+  trail: marked
+  also: "Bond and West Bond are on the same day hike"
+  lat: 44.144
+  lon: -71.515
+  status: to-hike
+- name: "Mount Zealand"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Zealand"
+  park: "White Mountain National Forest"
+  elevation: 4260
+  route: "Zealand Trail and Twinway"
+  miles: 10.8
+  gain: 2600
+  trail: marked
+  lat: 44.1797
+  lon: -71.5213
+  status: to-hike
+- name: "North Tripyramid"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Sandwich Range"
+  park: "White Mountain National Forest"
+  elevation: 4180
+  route: "Pine Bend Brook and Mount Tripyramid trails loop"
+  miles: 10.8
+  gain: 3100
+  trail: marked
+  also: "Middle Tripyramid is on the same loop"
+  lat: 43.9808
+  lon: -71.443
+  status: to-hike
+- name: "Mount Cabot"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Kilkenny"
+  park: "White Mountain National Forest"
+  elevation: 4170
+  route: "Cabot Trail and Kilkenny Ridge Trail"
+  miles: 8.0
+  gain: 2700
+  trail: marked
+  lat: 44.506
+  lon: -71.4144
+  status: to-hike
+- name: "East Osceola"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Osceola"
+  park: "White Mountain National Forest"
+  elevation: 4156
+  route: "Osceola Trail from Tripoli Road"
+  miles: 7.2
+  gain: 2500
+  trail: marked
+  also: "Osceola is across the chimney"
+  lat: 44.0062
+  lon: -71.5206
+  status: to-hike
+- name: "Middle Tripyramid"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Sandwich Range"
+  park: "White Mountain National Forest"
+  elevation: 4140
+  route: "Pine Bend Brook and Mount Tripyramid trails loop"
+  miles: 10.8
+  gain: 3100
+  trail: marked
+  also: "North Tripyramid is on the same loop"
+  lat: 43.9733
+  lon: -71.4429
+  status: to-hike
+- name: "Cannon Mountain"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Franconia Notch"
+  park: "Franconia Notch State Park"
+  elevation: 4100
+  route: "Hi-Cannon Trail from Lafayette Place"
+  miles: 5.0
+  gain: 2000
+  trail: marked
+  lat: 44.1565
+  lon: -71.6984
+  status: to-hike
+- name: "Wildcat D"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Wildcat Ridge"
+  park: "White Mountain National Forest"
+  elevation: 4070
+  route: "Wildcat Ridge Trail from Pinkham Notch"
+  miles: 8.5
+  gain: 3300
+  trail: marked
+  also: "Wildcat is on the same ridge"
+  lat: 44.2597
+  lon: -71.2167
+  status: to-hike
+- name: "Mount Hale"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Hale"
+  park: "White Mountain National Forest"
+  elevation: 4054
+  route: "Hale Brook Trail from Zealand Road"
+  miles: 4.4
+  gain: 2350
+  trail: marked
+  lat: 44.2217
+  lon: -71.512
+  status: to-hike
+- name: "Mount Jackson"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Crawford Notch"
+  park: "White Mountain National Forest"
+  elevation: 4052
+  route: "Webster–Jackson Trail from Crawford Notch"
+  miles: 6.0
+  gain: 2200
+  trail: marked
+  lat: 44.1945
+  lon: -71.3887
+  status: to-hike
+- name: "Mount Tom"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Willey Range"
+  park: "White Mountain National Forest"
+  elevation: 4051
+  route: "A–Z Trail and Mount Tom Spur"
+  miles: 7.4
+  gain: 2500
+  trail: marked
+  also: "Field and Willey are on the same range"
+  lat: 44.2103
+  lon: -71.4459
+  status: to-hike
+- name: "Mount Moriah"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Carter–Moriah Range"
+  park: "White Mountain National Forest"
+  elevation: 4049
+  route: "Stony Brook Trail and Carter–Moriah Trail loop"
+  miles: 9.5
+  gain: 3100
+  trail: marked
+  lat: 44.3403
+  lon: -71.1315
+  status: to-hike
+- name: "Mount Passaconaway"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Sandwich Range"
+  park: "White Mountain National Forest"
+  elevation: 4043
+  route: "Dicey's Mill Trail from Passaconaway Road"
+  miles: 8.8
+  gain: 2400
+  trail: marked
+  also: "Whiteface is on the same ridge"
+  lat: 43.9547
+  lon: -71.3814
+  status: to-hike
+- name: "Owl's Head"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Pemigewasset Wilderness"
+  park: "White Mountain National Forest"
+  elevation: 4025
+  route: "Lincoln Woods Trail and the Owl's Head slide path"
+  miles: 18.0
+  gain: 3000
+  trail: unmarked
+  lat: 44.1458
+  lon: -71.5792
+  status: to-hike
+- name: "Galehead Mountain"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Twin Range"
+  park: "White Mountain National Forest"
+  elevation: 4024
+  route: "Gale River Trail and Garfield Ridge Trail"
+  miles: 10.4
+  gain: 3300
+  trail: marked
+  also: "South Twin is the next peak over"
+  lat: 44.1848
+  lon: -71.5734
+  status: to-hike
+- name: "Mount Whiteface"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Sandwich Range"
+  park: "White Mountain National Forest"
+  elevation: 4020
+  route: "Blueberry Ledge and Rollins trails"
+  miles: 11.3
+  gain: 3900
+  trail: marked
+  also: "Passaconaway is on the same ridge"
+  lat: 43.934
+  lon: -71.4059
+  status: to-hike
+- name: "Mount Waumbek"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Pliny Range"
+  park: "White Mountain National Forest"
+  elevation: 4006
+  route: "Starr King Trail from Jefferson"
+  miles: 7.4
+  gain: 2500
+  trail: marked
+  lat: 44.4328
+  lon: -71.417
+  status: to-hike
+- name: "Mount Isolation"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Dry River Wilderness"
+  park: "White Mountain National Forest"
+  elevation: 4004
+  route: "Rocky Branch Trail and Isolation Trail"
+  miles: 13.8
+  gain: 3000
+  trail: marked
+  lat: 44.2148
+  lon: -71.3092
+  status: to-hike
+- name: "Mount Tecumseh"
+  state: "NH"
+  list: "New Hampshire 48"
+  range: "Waterville Valley"
+  park: "White Mountain National Forest"
+  elevation: 4003
+  route: "Mount Tecumseh Trail from Waterville Valley"
+  miles: 5.0
+  gain: 2100
+  trail: marked
+  also: "Resurveyed at 3,997 ft in 2019; still on the AMC list"
+  lat: 43.9673
+  lon: -71.5581
+  status: to-hike
+- name: "Mount Marcy"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Marcy Massif"
+  park: "High Peaks Wilderness"
+  elevation: 5344
+  route: "Van Hoevenberg Trail from Adirondak Loj"
+  miles: 14.8
+  gain: 3700
+  trail: marked
+  lat: 44.1127
+  lon: -73.9237
+  status: to-hike
+- name: "Algonquin Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "MacIntyre Range"
+  park: "High Peaks Wilderness"
+  elevation: 5114
+  route: "Algonquin Trail from Adirondak Loj"
+  miles: 8.8
+  gain: 2900
+  trail: marked
+  also: "Wright Peak is a short side trip"
+  lat: 44.1436
+  lon: -73.9867
+  status: to-hike
+- name: "Mount Haystack"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Great Range"
+  park: "High Peaks Wilderness"
+  elevation: 4960
+  route: "Phelps Trail and Haystack Brook Trail from Adirondak Loj"
+  miles: 17.2
+  gain: 3800
+  trail: marked
+  lat: 44.1056
+  lon: -73.9006
+  status: to-hike
+- name: "Mount Skylight"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Marcy Massif"
+  park: "High Peaks Wilderness"
+  elevation: 4924
+  route: "Van Hoevenberg and Lake Arnold routes from Adirondak Loj"
+  miles: 16.0
+  gain: 4000
+  trail: marked
+  also: "Usually paired with Marcy"
+  lat: 44.0994
+  lon: -73.9308
+  status: to-hike
+- name: "Whiteface Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Sentinel Range"
+  park: "Wilmington Wild Forest"
+  elevation: 4867
+  route: "Wilmington Trail from NY 86"
+  miles: 10.3
+  gain: 3600
+  trail: marked
+  lat: 44.3658
+  lon: -73.9028
+  status: to-hike
+- name: "Dix Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Dix Range"
+  park: "Dix Mountain Wilderness"
+  elevation: 4857
+  route: "Round Pond Trail"
+  miles: 14.0
+  gain: 3800
+  trail: marked
+  also: "Hough, South Dix and Grace are on the same range"
+  lat: 44.0822
+  lon: -73.7864
+  status: to-hike
+- name: "Gray Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Marcy Massif"
+  park: "High Peaks Wilderness"
+  elevation: 4840
+  route: "Lake Tear spur from the Van Hoevenberg Trail"
+  miles: 17.0
+  gain: 4100
+  trail: unmarked
+  also: "Often combined with Marcy and Skylight"
+  lat: 44.1114
+  lon: -73.9349
+  status: to-hike
+- name: "Iroquois Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "MacIntyre Range"
+  park: "High Peaks Wilderness"
+  elevation: 4840
+  route: "Algonquin Trail and the Iroquois spur from Adirondak Loj"
+  miles: 9.6
+  gain: 3300
+  trail: unmarked
+  also: "Combined with Algonquin"
+  lat: 44.137
+  lon: -73.9982
+  status: to-hike
+- name: "Basin Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Great Range"
+  park: "High Peaks Wilderness"
+  elevation: 4827
+  route: "Orebed Brook and Range trails from the Garden"
+  miles: 11.8
+  gain: 4700
+  trail: marked
+  also: "Saddleback and Gothics on the same ridge"
+  lat: 44.1212
+  lon: -73.8863
+  status: to-hike
+- name: "Gothics"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Great Range"
+  park: "High Peaks Wilderness"
+  elevation: 4736
+  route: "Orebed Brook and Range trails from the Garden"
+  miles: 10.8
+  gain: 4000
+  trail: marked
+  lat: 44.1281
+  lon: -73.8571
+  status: to-hike
+- name: "Mount Colden"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Colden"
+  park: "High Peaks Wilderness"
+  elevation: 4714
+  route: "Avalanche Pass and the Trap Dyke from Adirondak Loj"
+  miles: 13.4
+  gain: 3800
+  trail: marked
+  lat: 44.127
+  lon: -73.9599
+  status: to-hike
+- name: "Giant Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Giant Range"
+  park: "Giant Mountain Wilderness"
+  elevation: 4627
+  route: "Ridge Trail and Zander Scott Trail loop from NY 73"
+  miles: 7.0
+  gain: 3500
+  trail: marked
+  lat: 44.1611
+  lon: -73.7202
+  status: to-hike
+- name: "Nippletop"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Colvin Range"
+  park: "High Peaks Wilderness"
+  elevation: 4620
+  route: "Elk Pass from the Ausable Club"
+  miles: 14.0
+  gain: 4400
+  trail: marked
+  also: "Dial is nearby"
+  lat: 44.0892
+  lon: -73.8163
+  status: to-hike
+- name: "Santanoni Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Santanoni Range"
+  park: "High Peaks Wilderness"
+  elevation: 4607
+  route: "Bradley Pond Trail from Newcomb"
+  miles: 13.3
+  gain: 4100
+  trail: marked
+  also: "Panther is nearby"
+  lat: 44.0825
+  lon: -74.1312
+  status: to-hike
+- name: "Mount Redfield"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Redfield–Cliff"
+  park: "High Peaks Wilderness"
+  elevation: 4606
+  route: "Lake Colden and the Redfield herd path from Upper Works"
+  miles: 17.0
+  gain: 3900
+  trail: unmarked
+  also: "Cliff is nearby"
+  lat: 44.0948
+  lon: -73.9499
+  status: to-hike
+- name: "Wright Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "MacIntyre Range"
+  park: "High Peaks Wilderness"
+  elevation: 4580
+  route: "Wright Peak Trail from Adirondak Loj"
+  miles: 7.4
+  gain: 2700
+  trail: marked
+  also: "Algonquin is nearby"
+  lat: 44.1517
+  lon: -73.9803
+  status: to-hike
+- name: "Saddleback Mountain (Adirondacks)"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Great Range"
+  park: "High Peaks Wilderness"
+  elevation: 4515
+  route: "Orebed Brook and Range trails from the Garden"
+  miles: 12.0
+  gain: 4300
+  trail: marked
+  also: "Basin and Gothics on the same ridge"
+  lat: 44.1267
+  lon: -73.8752
+  status: to-hike
+- name: "Panther Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Santanoni Range"
+  park: "High Peaks Wilderness"
+  elevation: 4442
+  route: "Bradley Pond Trail from Newcomb"
+  miles: 10.0
+  gain: 2900
+  trail: marked
+  also: "Santanoni is nearby"
+  lat: 44.0984
+  lon: -74.1321
+  status: to-hike
+- name: "Table Top Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Phelps–Table Top"
+  park: "High Peaks Wilderness"
+  elevation: 4427
+  route: "Phelps Trail and the Table Top herd path from Adirondak Loj"
+  miles: 10.4
+  gain: 3000
+  trail: unmarked
+  also: "Phelps is nearby"
+  lat: 44.1407
+  lon: -73.9163
+  status: to-hike
+- name: "Rocky Peak Ridge"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Giant Range"
+  park: "Giant Mountain Wilderness"
+  elevation: 4420
+  route: "Ridge Trail from NY 73 over Giant"
+  miles: 12.0
+  gain: 4300
+  trail: marked
+  also: "Giant is on the way"
+  lat: 44.1544
+  lon: -73.7056
+  status: to-hike
+- name: "Macomb Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Dix Range"
+  park: "Dix Mountain Wilderness"
+  elevation: 4405
+  route: "Macomb slide from the Dix Mountain Trail"
+  miles: 11.5
+  gain: 3300
+  trail: unmarked
+  lat: 44.0517
+  lon: -73.7801
+  status: to-hike
+- name: "Armstrong Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Great Range"
+  park: "High Peaks Wilderness"
+  elevation: 4400
+  route: "Wolfjaws–Armstrong–Gothics from the Garden"
+  miles: 15.4
+  gain: 5100
+  trail: marked
+  also: "Upper Wolfjaw and Gothics are on the same ridge"
+  lat: 44.1348
+  lon: -73.849
+  status: to-hike
+- name: "Hough Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Dix Range"
+  park: "Dix Mountain Wilderness"
+  elevation: 4400
+  route: "Round Pond Trail and the Dix Range traverse"
+  miles: 14.5
+  gain: 4000
+  trail: unmarked
+  also: "Dix is the next peak over"
+  lat: 44.0695
+  lon: -73.7776
+  status: to-hike
+- name: "Seward Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Seward Range"
+  park: "High Peaks Wilderness"
+  elevation: 4361
+  route: "Seward Range trail from Coreys Road"
+  miles: 17.6
+  gain: 4300
+  trail: unmarked
+  also: "Donaldson and Emmons on the same range"
+  lat: 44.1597
+  lon: -74.1997
+  status: to-hike
+- name: "Mount Marshall"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Marshall"
+  park: "High Peaks Wilderness"
+  elevation: 4360
+  route: "Herbert Brook herd path from Upper Works"
+  miles: 15.0
+  gain: 3500
+  trail: unmarked
+  lat: 44.1275
+  lon: -74.0118
+  status: to-hike
+- name: "Allen Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Allen"
+  park: "High Peaks Wilderness"
+  elevation: 4340
+  route: "Opalescent River and the Allen Brook herd path from Upper Works"
+  miles: 18.0
+  gain: 3700
+  trail: unmarked
+  lat: 44.0708
+  lon: -73.9397
+  status: to-hike
+- name: "Big Slide Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Johns Brook Valley"
+  park: "High Peaks Wilderness"
+  elevation: 4240
+  route: "The Brothers loop from the Garden"
+  miles: 10.0
+  gain: 3000
+  trail: marked
+  lat: 44.1823
+  lon: -73.8704
+  status: to-hike
+- name: "Esther Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Sentinel Range"
+  park: "Wilmington Wild Forest"
+  elevation: 4240
+  route: "Esther Mountain Trail from NY 86"
+  miles: 6.4
+  gain: 2800
+  trail: marked
+  lat: 44.387
+  lon: -73.8899
+  status: to-hike
+- name: "Upper Wolfjaw Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Great Range"
+  park: "High Peaks Wilderness"
+  elevation: 4185
+  route: "Wolfjaw Notch route from the Garden"
+  miles: 10.2
+  gain: 3600
+  trail: marked
+  also: "Lower Wolfjaw and Armstrong on the same ridge"
+  lat: 44.1405
+  lon: -73.8453
+  status: to-hike
+- name: "Lower Wolfjaw Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Great Range"
+  park: "High Peaks Wilderness"
+  elevation: 4175
+  route: "Wolfjaw Notch route from the Garden"
+  miles: 9.0
+  gain: 3200
+  trail: marked
+  also: "Upper Wolfjaw is the next peak over"
+  lat: 44.1484
+  lon: -73.8326
+  status: to-hike
+- name: "Street Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Street–Nye"
+  park: "High Peaks Wilderness"
+  elevation: 4166
+  route: "Indian Pass Trail and the Street herd path from Heart Lake"
+  miles: 12.8
+  gain: 3200
+  trail: unmarked
+  also: "Nye is the next peak over"
+  lat: 44.1793
+  lon: -74.0272
+  status: to-hike
+- name: "Phelps Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Phelps–Table Top"
+  park: "High Peaks Wilderness"
+  elevation: 4161
+  route: "Van Hoevenberg and Phelps trails from Adirondak Loj"
+  miles: 8.4
+  gain: 2000
+  trail: marked
+  lat: 44.157
+  lon: -73.9215
+  status: to-hike
+- name: "Donaldson Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Seward Range"
+  park: "High Peaks Wilderness"
+  elevation: 4140
+  route: "Seward Range trail from Coreys Road"
+  miles: 17.2
+  gain: 4300
+  trail: unmarked
+  also: "On the Seward Range"
+  lat: 44.1539
+  lon: -74.211
+  status: to-hike
+- name: "Seymour Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Seward Range"
+  park: "High Peaks Wilderness"
+  elevation: 4120
+  route: "Ward Brook Trail and the Seymour herd path from Coreys Road"
+  miles: 17.3
+  gain: 4000
+  trail: unmarked
+  lat: 44.1582
+  lon: -74.1727
+  status: to-hike
+- name: "Sawteeth"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Great Range"
+  park: "High Peaks Wilderness"
+  elevation: 4100
+  route: "Lake Road and Scott Clearing from the Ausable Club"
+  miles: 11.0
+  gain: 3700
+  trail: marked
+  lat: 44.1133
+  lon: -73.8507
+  status: to-hike
+- name: "Cascade Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Cascade Range"
+  park: "High Peaks Wilderness"
+  elevation: 4098
+  route: "Cascade Mountain Trail from NY 73"
+  miles: 4.8
+  gain: 1940
+  trail: marked
+  also: "Porter is nearby"
+  lat: 44.2186
+  lon: -73.8606
+  status: to-hike
+- name: "South Dix"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Dix Range"
+  park: "Dix Mountain Wilderness"
+  elevation: 4060
+  route: "Round Pond Trail"
+  miles: 12.0
+  gain: 3200
+  trail: unmarked
+  lat: 44.06
+  lon: -73.7743
+  status: to-hike
+- name: "Porter Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Cascade Range"
+  park: "High Peaks Wilderness"
+  elevation: 4059
+  route: "Cascade Mountain Trail from NY 73"
+  miles: 6.4
+  gain: 2200
+  trail: marked
+  also: "Cascade is on the way"
+  lat: 44.2153
+  lon: -73.8436
+  status: to-hike
+- name: "Mount Colvin"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Colvin Range"
+  park: "High Peaks Wilderness"
+  elevation: 4057
+  route: "Lake Road and Colvin Trail from the Ausable Club"
+  miles: 11.4
+  gain: 3700
+  trail: marked
+  also: "Blake is nearby"
+  lat: 44.0939
+  lon: -73.8344
+  status: to-hike
+- name: "Mount Emmons"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Seward Range"
+  park: "High Peaks Wilderness"
+  elevation: 4040
+  route: "Seward Range trail from Coreys Road"
+  miles: 17.6
+  gain: 4200
+  trail: unmarked
+  also: "On the Seward Range"
+  lat: 44.1437
+  lon: -74.214
+  status: to-hike
+- name: "Dial Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Colvin Range"
+  park: "High Peaks Wilderness"
+  elevation: 4020
+  route: "Bear Den route from the Ausable Club"
+  miles: 10.2
+  gain: 3000
+  trail: marked
+  also: "Nippletop is nearby"
+  lat: 44.1059
+  lon: -73.796
+  status: to-hike
+- name: "Grace Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Dix Range"
+  park: "Dix Mountain Wilderness"
+  elevation: 4012
+  route: "Round Pond Trail"
+  miles: 12.0
+  gain: 3200
+  trail: unmarked
+  also: "Also called East Dix"
+  lat: 44.0653
+  lon: -73.7574
+  status: to-hike
+- name: "Blake Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Colvin Range"
+  park: "High Peaks Wilderness"
+  elevation: 3960
+  route: "Lake Road and Colvin Trail from the Ausable Club"
+  miles: 12.7
+  gain: 3800
+  trail: unmarked
+  also: "Colvin is nearby"
+  lat: 44.0814
+  lon: -73.8446
+  status: to-hike
+- name: "Cliff Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Redfield–Cliff"
+  park: "High Peaks Wilderness"
+  elevation: 3960
+  route: "Lake Colden and the Cliff herd path from Upper Works"
+  miles: 17.0
+  gain: 3900
+  trail: unmarked
+  also: "Redfield is nearby"
+  lat: 44.1031
+  lon: -73.9751
+  status: to-hike
+- name: "Nye Mountain"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Street–Nye"
+  park: "High Peaks Wilderness"
+  elevation: 3895
+  route: "Indian Pass Trail and the Street herd path from Heart Lake"
+  miles: 12.8
+  gain: 3200
+  trail: unmarked
+  also: "Street is the next peak over"
+  lat: 44.1873
+  lon: -74.0238
+  status: to-hike
+- name: "Couchsachraga Peak"
+  state: "NY"
+  list: "Adirondack 46"
+  range: "Santanoni Range"
+  park: "High Peaks Wilderness"
+  elevation: 3820
+  route: "Bradley Pond Trail and the Santanoni traverse from Newcomb"
+  miles: 16.6
+  gain: 4400
+  trail: unmarked
+  also: "Santanoni and Panther on the same range"
+  lat: 44.0956
+  lon: -74.1602
+  status: to-hike
+- name: "Katahdin (Baxter Peak)"
+  state: "ME"
+  list: "Maine 14"
+  range: "Katahdin"
+  park: "Baxter State Park"
+  elevation: 5268
+  route: "Hunt Trail (Appalachian Trail)"
+  miles: 10.4
+  gain: 4200
+  trail: marked
+  also: "Hamlin Peak is across the Knife Edge"
+  lat: 45.9044
+  lon: -68.9217
+  status: to-hike
+- name: "Hamlin Peak"
+  state: "ME"
+  list: "Maine 14"
+  range: "Katahdin"
+  park: "Baxter State Park"
+  elevation: 4756
+  route: "Hamlin Ridge Trail from Roaring Brook"
+  miles: 10.0
+  gain: 3500
+  trail: marked
+  also: "Katahdin is nearby"
+  lat: 45.9212
+  lon: -68.9233
+  status: to-hike
+- name: "Sugarloaf Mountain"
+  state: "ME"
+  list: "Maine 14"
+  range: "Carrabassett Valley"
+  park: "Western Maine mountains"
+  elevation: 4250
+  route: "Sugarloaf Mountain Trail"
+  miles: 5.0
+  gain: 2400
+  trail: marked
+  lat: 45.0314
+  lon: -70.4286
+  status: to-hike
+- name: "Crocker Mountain"
+  state: "ME"
+  list: "Maine 14"
+  range: "Crockers"
+  park: "Western Maine mountains"
+  elevation: 4228
+  route: "Appalachian Trail from ME 27"
+  miles: 7.2
+  gain: 3000
+  trail: marked
+  also: "South Crocker is on the same ridge"
+  lat: 45.0472
+  lon: -70.3828
+  status: to-hike
+- name: "Old Speck Mountain"
+  state: "ME"
+  list: "Maine 14"
+  range: "Mahoosuc Range"
+  park: "Grafton Notch State Park"
+  elevation: 4170
+  route: "Old Speck Trail from Grafton Notch"
+  miles: 7.6
+  gain: 2700
+  trail: marked
+  lat: 44.5712
+  lon: -70.9537
+  status: to-hike
+- name: "North Brother"
+  state: "ME"
+  list: "Maine 14"
+  range: "Katahdin Area"
+  park: "Baxter State Park"
+  elevation: 4151
+  route: "Marston Trail"
+  miles: 10.0
+  gain: 3300
+  trail: marked
+  lat: 45.9573
+  lon: -68.9853
+  status: to-hike
+- name: "Bigelow Mountain (West Peak)"
+  state: "ME"
+  list: "Maine 14"
+  range: "Bigelow Range"
+  park: "Bigelow Preserve"
+  elevation: 4145
+  route: "Fire Warden's Trail and Appalachian Trail loop"
+  miles: 11.0
+  gain: 4000
+  trail: marked
+  also: "Avery Peak is on the same ridge"
+  lat: 45.1445
+  lon: -70.309
+  status: to-hike
+- name: "Saddleback Mountain (Maine)"
+  state: "ME"
+  list: "Maine 14"
+  range: "Saddleback Range"
+  park: "Rangeley Lakes region"
+  elevation: 4120
+  route: "Appalachian Trail from ME 4"
+  miles: 10.6
+  gain: 3100
+  trail: marked
+  also: "The Horn is on the same ridge"
+  lat: 44.9367
+  lon: -70.5031
+  status: to-hike
+- name: "Bigelow Mountain (Avery Peak)"
+  state: "ME"
+  list: "Maine 14"
+  range: "Bigelow Range"
+  park: "Bigelow Preserve"
+  elevation: 4090
+  route: "Fire Warden's Trail and Appalachian Trail loop"
+  miles: 11.0
+  gain: 4000
+  trail: marked
+  also: "West Peak is on the same ridge"
+  lat: 45.1468
+  lon: -70.2879
+  status: to-hike
+- name: "Mount Abraham (Maine)"
+  state: "ME"
+  list: "Maine 14"
+  range: "Western Maine"
+  park: "Western Maine mountains"
+  elevation: 4050
+  route: "Mount Abraham Trail"
+  miles: 7.8
+  gain: 2300
+  trail: marked
+  lat: 44.973
+  lon: -70.3265
+  status: to-hike
+- name: "South Crocker Mountain"
+  state: "ME"
+  list: "Maine 14"
+  range: "Crockers"
+  park: "Western Maine mountains"
+  elevation: 4050
+  route: "Appalachian Trail from ME 27"
+  miles: 7.2
+  gain: 3000
+  trail: marked
+  also: "Crocker is on the same ridge"
+  lat: 45.0362
+  lon: -70.3761
+  status: to-hike
+- name: "Saddleback Horn"
+  state: "ME"
+  list: "Maine 14"
+  range: "Saddleback Range"
+  park: "Rangeley Lakes region"
+  elevation: 4041
+  route: "Appalachian Trail from ME 4"
+  miles: 10.6
+  gain: 3100
+  trail: marked
+  also: "Saddleback is on the same ridge"
+  lat: 44.9513
+  lon: -70.4872
+  status: to-hike
+- name: "Mount Redington"
+  state: "ME"
+  list: "Maine 14"
+  range: "Carrabassett Valley"
+  park: "Western Maine mountains"
+  elevation: 4010
+  route: "Logging road and bushwhack from Caribou Valley Road"
+  miles: 8.0
+  gain: 2500
+  trail: unmarked
+  lat: 45.025
+  lon: -70.3887
+  status: to-hike
+- name: "Spaulding Mountain"
+  state: "ME"
+  list: "Maine 14"
+  range: "Carrabassett Valley"
+  park: "Western Maine mountains"
+  elevation: 4010
+  route: "Appalachian Trail from Caribou Valley Road"
+  miles: 8.2
+  gain: 2700
+  trail: unmarked
+  lat: 45.003
+  lon: -70.3335
+  status: to-hike
+- name: "Mount Mansfield"
+  state: "VT"
+  list: "Vermont 5"
+  range: "Green Mountains"
+  park: "Mount Mansfield State Forest"
+  elevation: 4393
+  route: "Sunset Ridge Trail and Long Trail"
+  miles: 6.4
+  gain: 2700
+  trail: marked
+  lat: 44.5439
+  lon: -72.8143
+  status: to-hike
+- name: "Killington Peak"
+  state: "VT"
+  list: "Vermont 5"
+  range: "Green Mountains"
+  park: "Green Mountains (Long Trail)"
+  elevation: 4235
+  route: "Bucklin Trail from Wheelerville Road"
+  miles: 7.4
+  gain: 2800
+  trail: marked
+  lat: 43.6045
+  lon: -72.8201
+  status: to-hike
+- name: "Camel's Hump"
+  state: "VT"
+  list: "Vermont 5"
+  range: "Green Mountains"
+  park: "Camel's Hump State Park"
+  elevation: 4083
+  route: "Burrows Trail and Long Trail loop"
+  miles: 6.5
+  gain: 2500
+  trail: marked
+  lat: 44.3189
+  lon: -72.8856
+  status: to-hike
+- name: "Mount Ellen"
+  state: "VT"
+  list: "Vermont 5"
+  range: "Green Mountains"
+  park: "Green Mountains (Long Trail)"
+  elevation: 4083
+  route: "Long Trail from Appalachian Gap"
+  miles: 6.6
+  gain: 2200
+  trail: marked
+  also: "Abraham is on the Long Trail"
+  lat: 44.16
+  lon: -72.9289
+  status: to-hike
+- name: "Mount Abraham (Vermont)"
+  state: "VT"
+  list: "Vermont 5"
+  range: "Green Mountains"
+  park: "Green Mountain National Forest"
+  elevation: 4006
+  route: "Long Trail from Lincoln Gap"
+  miles: 5.2
+  gain: 1900
+  trail: marked
+  also: "Ellen is on the Long Trail"
+  lat: 44.1206
+  lon: -72.9361
+  status: to-hike
+- name: "Slide Mountain"
+  state: "NY"
+  list: "Catskills 2"
+  range: "Catskill High Peaks"
+  park: "Slide Mountain Wilderness"
+  elevation: 4180
+  route: "Phoenicia East Branch Trail"
+  miles: 6.6
+  gain: 1900
+  trail: marked
+  also: "Highest peak in the Catskills"
+  lat: 41.9986
+  lon: -74.3864
+  status: to-hike
+- name: "Hunter Mountain"
+  state: "NY"
+  list: "Catskills 2"
+  range: "Catskill High Peaks"
+  park: "Hunter–West Kill Wilderness"
+  elevation: 4040
+  route: "Spruceton Trail"
+  miles: 7.0
+  gain: 2200
+  trail: marked
+  also: "Fire tower on the summit"
+  lat: 42.1779
+  lon: -74.2304
+  status: to-hike

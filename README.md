@@ -19,6 +19,7 @@ npm run preview   # serve the built site from dist/
 | --- | --- |
 | `_posts/<blog>/` | Blog posts, one folder per blog in the Blogs menu |
 | `_data/timeline.yml` | Jobs, schooling and projects for the home page timeline |
+| `_data/ne115.yml` | The Northeast 115 peaks and which are hiked, for the map and table in the travel post (see [Logging a hike](#logging-a-northeast-115-hike)) |
 | `src/blogs.ts` | The blogs: menu name, page heading and intro |
 | `src/site.ts` | Navigation and profile links |
 | `src/pages/` | One file per page; `[blog]/` builds each blog and its posts |
@@ -45,6 +46,17 @@ The first paragraph is the excerpt in the blog's post list.
 It's published at `/<blog address>/title-of-post/`, where the blog's address is its `slug` in `src/blogs.ts`.
 
 Posts are all rights reserved by default. Add `license: cc0` to a post's front matter to dedicate it to the public domain; the post then carries a CC0 notice.
+
+## Logging a Northeast 115 hike
+
+The map and table in `_posts/travel/2026-10-16-Chasing-The-Northeast-115.mdx` read `_data/ne115.yml`. To log a peak, change its `status` and add the day:
+
+```yaml
+status: hiked
+date: 2026-10-04
+```
+
+The progress bar, the counts and the map markers follow. Length and gain are for one standard route and are approximate; fix any that are wrong in the same file.
 
 ## Images in posts
 

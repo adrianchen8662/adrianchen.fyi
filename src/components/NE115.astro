@@ -1,0 +1,8 @@
+---
+// In a post: <NE115 />. Reads _data/ne115.yml.
+import { loadPeaks } from '../lib/ne115';
+import NE115Tracker from './NE115Tracker';
+
+const peaks = await loadPeaks();
+---
+<NE115Tracker client:visible peaks={peaks} />
