@@ -1,0 +1,18 @@
+# The Northeast 115 hike log: one entry per outing, newest or oldest first (it is sorted by date).
+# Read by src/lib/ne115.ts. A peak is "hiked" once any hike lists it under summited, and "attempted" if it is only
+# ever under attempted. Miles and gain are for the hike as a whole, whatever route it took, so they are counted
+# once however many peaks it covers.
+#
+# Peak names are spelled exactly as in _data/ne115.yml; the build stops on a name it doesn't recognize.
+#
+# - date: 2026-09-12                       required
+#   title: Hale and Zealand                optional
+#   route: Lend-a-Hand Trail and Twinway   required: what I actually hiked
+#   miles: 11.2                            optional, round trip
+#   gain: 3400                             optional, feet of climbing
+#   summited:                              peaks I reached the summit of
+#     - Mount Hale
+#   attempted:                             peaks I set out for and didn't reach
+#     - Mount Zealand
+#   notes: Turned around short of the Zealand summit.   optional
+[]

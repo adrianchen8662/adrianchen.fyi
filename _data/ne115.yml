@@ -1,19 +1,16 @@
 # The Northeast 115: every 4,000-foot peak on the Northeast 111 Club's list.
 # Read by src/components/NE115.astro for the travel post "Chasing the Northeast 115".
 #
-# To log a hike, change a peak's status and add the day you climbed it:
-#   status: hiked
-#   date: 2026-10-04
+# This file is just the peaks. Which ones are hiked comes from the hike log, _data/ne115-hikes.yml.
 #
 # Fields
 #   name, state (NH, ME, VT or NY), list, range, park   what and where
 #   elevation                                           summit, in feet
-#   route, miles, gain, trail                           a standard route (round trip, feet of climbing). Approximate:
-#                                                       real routes vary, and several peaks share one outing.
+#   route, miles, gain, trail                           a standard route to compare against (round trip, feet of climbing).
+#                                                       Approximate. What was actually hiked is in the hike log.
 #   trail                                               marked = maintained trail to the summit; unmarked = herd path or bushwhack
 #   also                                                other peaks on the same route (optional)
 #   lat, lon                                            summit, in decimal degrees (approximate)
-#   status, date                                        to-hike or hiked; the date is optional
 
 - name: "Mount Washington"
   state: "NH"
@@ -27,7 +24,6 @@
   trail: marked
   lat: 44.2705
   lon: -71.3033
-  status: to-hike
 - name: "Mount Adams"
   state: "NH"
   list: "New Hampshire 48"
@@ -41,7 +37,6 @@
   also: "Madison is nearby"
   lat: 44.3206
   lon: -71.2914
-  status: to-hike
 - name: "Mount Jefferson"
   state: "NH"
   list: "New Hampshire 48"
@@ -54,7 +49,6 @@
   trail: marked
   lat: 44.3042
   lon: -71.3169
-  status: to-hike
 - name: "Mount Monroe"
   state: "NH"
   list: "New Hampshire 48"
@@ -67,7 +61,6 @@
   trail: marked
   lat: 44.2556
   lon: -71.3206
-  status: to-hike
 - name: "Mount Madison"
   state: "NH"
   list: "New Hampshire 48"
@@ -81,7 +74,6 @@
   also: "Adams is nearby"
   lat: 44.3288
   lon: -71.2768
-  status: to-hike
 - name: "Mount Lafayette"
   state: "NH"
   list: "New Hampshire 48"
@@ -95,7 +87,6 @@
   also: "Lincoln is on the same loop"
   lat: 44.1607
   lon: -71.6444
-  status: to-hike
 - name: "Mount Lincoln"
   state: "NH"
   list: "New Hampshire 48"
@@ -109,7 +100,6 @@
   also: "Lafayette is on the same loop"
   lat: 44.1489
   lon: -71.6445
-  status: to-hike
 - name: "South Twin Mountain"
   state: "NH"
   list: "New Hampshire 48"
@@ -123,7 +113,6 @@
   also: "Galehead is on the way"
   lat: 44.1875
   lon: -71.5553
-  status: to-hike
 - name: "Carter Dome"
   state: "NH"
   list: "New Hampshire 48"
@@ -136,7 +125,6 @@
   trail: marked
   lat: 44.2673
   lon: -71.1793
-  status: to-hike
 - name: "Mount Moosilauke"
   state: "NH"
   list: "New Hampshire 48"
@@ -149,7 +137,6 @@
   trail: marked
   lat: 44.0245
   lon: -71.8309
-  status: to-hike
 - name: "Mount Eisenhower"
   state: "NH"
   list: "New Hampshire 48"
@@ -162,7 +149,6 @@
   trail: marked
   lat: 44.2407
   lon: -71.3502
-  status: to-hike
 - name: "North Twin Mountain"
   state: "NH"
   list: "New Hampshire 48"
@@ -175,7 +161,6 @@
   trail: marked
   lat: 44.2023
   lon: -71.5583
-  status: to-hike
 - name: "Mount Carrigain"
   state: "NH"
   list: "New Hampshire 48"
@@ -188,7 +173,6 @@
   trail: marked
   lat: 44.0936
   lon: -71.4468
-  status: to-hike
 - name: "Mount Bond"
   state: "NH"
   list: "New Hampshire 48"
@@ -202,7 +186,6 @@
   also: "West Bond and Bondcliff are on the same day hike"
   lat: 44.153
   lon: -71.5312
-  status: to-hike
 - name: "Middle Carter Mountain"
   state: "NH"
   list: "New Hampshire 48"
@@ -216,7 +199,6 @@
   also: "South Carter is on the same ridge"
   lat: 44.3031
   lon: -71.1673
-  status: to-hike
 - name: "West Bond"
   state: "NH"
   list: "New Hampshire 48"
@@ -230,7 +212,6 @@
   also: "Bond and Bondcliff are on the same day hike"
   lat: 44.156
   lon: -71.547
-  status: to-hike
 - name: "Mount Garfield"
   state: "NH"
   list: "New Hampshire 48"
@@ -243,7 +224,6 @@
   trail: marked
   lat: 44.187
   lon: -71.6109
-  status: to-hike
 - name: "Mount Liberty"
   state: "NH"
   list: "New Hampshire 48"
@@ -257,7 +237,6 @@
   also: "Flume is on the same loop"
   lat: 44.1158
   lon: -71.6421
-  status: to-hike
 - name: "South Carter Mountain"
   state: "NH"
   list: "New Hampshire 48"
@@ -271,7 +250,6 @@
   also: "Middle Carter is on the same ridge"
   lat: 44.2897
   lon: -71.1761
-  status: to-hike
 - name: "Wildcat Mountain"
   state: "NH"
   list: "New Hampshire 48"
@@ -285,7 +263,6 @@
   also: "Wildcat D is on the same ridge"
   lat: 44.2589
   lon: -71.2014
-  status: to-hike
 - name: "Mount Hancock"
   state: "NH"
   list: "New Hampshire 48"
@@ -299,7 +276,6 @@
   also: "South Hancock is on the same loop"
   lat: 44.0837
   lon: -71.4937
-  status: to-hike
 - name: "South Kinsman"
   state: "NH"
   list: "New Hampshire 48"
@@ -313,7 +289,6 @@
   also: "North Kinsman is on the same ridge"
   lat: 44.123
   lon: -71.7367
-  status: to-hike
 - name: "Mount Field"
   state: "NH"
   list: "New Hampshire 48"
@@ -327,7 +302,6 @@
   also: "Willey and Tom are on the same range"
   lat: 44.1962
   lon: -71.4345
-  status: to-hike
 - name: "Mount Osceola"
   state: "NH"
   list: "New Hampshire 48"
@@ -341,7 +315,6 @@
   also: "East Osceola is across the chimney"
   lat: 44.0016
   lon: -71.5356
-  status: to-hike
 - name: "Mount Flume"
   state: "NH"
   list: "New Hampshire 48"
@@ -355,7 +328,6 @@
   also: "Liberty is on the same loop"
   lat: 44.109
   lon: -71.6279
-  status: to-hike
 - name: "South Hancock"
   state: "NH"
   list: "New Hampshire 48"
@@ -369,7 +341,6 @@
   also: "North Hancock is on the same loop"
   lat: 44.0765
   lon: -71.4985
-  status: to-hike
 - name: "Mount Pierce"
   state: "NH"
   list: "New Hampshire 48"
@@ -382,7 +353,6 @@
   trail: marked
   lat: 44.2265
   lon: -71.366
-  status: to-hike
 - name: "North Kinsman"
   state: "NH"
   list: "New Hampshire 48"
@@ -396,7 +366,6 @@
   also: "South Kinsman is on the same ridge"
   lat: 44.135
   lon: -71.735
-  status: to-hike
 - name: "Mount Willey"
   state: "NH"
   list: "New Hampshire 48"
@@ -410,7 +379,6 @@
   also: "Field and Tom are on the same range"
   lat: 44.1833
   lon: -71.4167
-  status: to-hike
 - name: "Bondcliff"
   state: "NH"
   list: "New Hampshire 48"
@@ -424,7 +392,6 @@
   also: "Bond and West Bond are on the same day hike"
   lat: 44.144
   lon: -71.515
-  status: to-hike
 - name: "Mount Zealand"
   state: "NH"
   list: "New Hampshire 48"
@@ -437,7 +404,6 @@
   trail: marked
   lat: 44.1797
   lon: -71.5213
-  status: to-hike
 - name: "North Tripyramid"
   state: "NH"
   list: "New Hampshire 48"
@@ -451,7 +417,6 @@
   also: "Middle Tripyramid is on the same loop"
   lat: 43.9808
   lon: -71.443
-  status: to-hike
 - name: "Mount Cabot"
   state: "NH"
   list: "New Hampshire 48"
@@ -464,7 +429,6 @@
   trail: marked
   lat: 44.506
   lon: -71.4144
-  status: to-hike
 - name: "East Osceola"
   state: "NH"
   list: "New Hampshire 48"
@@ -478,7 +442,6 @@
   also: "Osceola is across the chimney"
   lat: 44.0062
   lon: -71.5206
-  status: to-hike
 - name: "Middle Tripyramid"
   state: "NH"
   list: "New Hampshire 48"
@@ -492,7 +455,6 @@
   also: "North Tripyramid is on the same loop"
   lat: 43.9733
   lon: -71.4429
-  status: to-hike
 - name: "Cannon Mountain"
   state: "NH"
   list: "New Hampshire 48"
@@ -505,7 +467,6 @@
   trail: marked
   lat: 44.1565
   lon: -71.6984
-  status: to-hike
 - name: "Wildcat D"
   state: "NH"
   list: "New Hampshire 48"
@@ -519,7 +480,6 @@
   also: "Wildcat is on the same ridge"
   lat: 44.2597
   lon: -71.2167
-  status: to-hike
 - name: "Mount Hale"
   state: "NH"
   list: "New Hampshire 48"
@@ -532,7 +492,6 @@
   trail: marked
   lat: 44.2217
   lon: -71.512
-  status: to-hike
 - name: "Mount Jackson"
   state: "NH"
   list: "New Hampshire 48"
@@ -545,7 +504,6 @@
   trail: marked
   lat: 44.1945
   lon: -71.3887
-  status: to-hike
 - name: "Mount Tom"
   state: "NH"
   list: "New Hampshire 48"
@@ -559,7 +517,6 @@
   also: "Field and Willey are on the same range"
   lat: 44.2103
   lon: -71.4459
-  status: to-hike
 - name: "Mount Moriah"
   state: "NH"
   list: "New Hampshire 48"
@@ -572,7 +529,6 @@
   trail: marked
   lat: 44.3403
   lon: -71.1315
-  status: to-hike
 - name: "Mount Passaconaway"
   state: "NH"
   list: "New Hampshire 48"
@@ -586,7 +542,6 @@
   also: "Whiteface is on the same ridge"
   lat: 43.9547
   lon: -71.3814
-  status: to-hike
 - name: "Owl's Head"
   state: "NH"
   list: "New Hampshire 48"
@@ -599,7 +554,6 @@
   trail: unmarked
   lat: 44.1458
   lon: -71.5792
-  status: to-hike
 - name: "Galehead Mountain"
   state: "NH"
   list: "New Hampshire 48"
@@ -613,7 +567,6 @@
   also: "South Twin is the next peak over"
   lat: 44.1848
   lon: -71.5734
-  status: to-hike
 - name: "Mount Whiteface"
   state: "NH"
   list: "New Hampshire 48"
@@ -627,7 +580,6 @@
   also: "Passaconaway is on the same ridge"
   lat: 43.934
   lon: -71.4059
-  status: to-hike
 - name: "Mount Waumbek"
   state: "NH"
   list: "New Hampshire 48"
@@ -640,7 +592,6 @@
   trail: marked
   lat: 44.4328
   lon: -71.417
-  status: to-hike
 - name: "Mount Isolation"
   state: "NH"
   list: "New Hampshire 48"
@@ -653,7 +604,6 @@
   trail: marked
   lat: 44.2148
   lon: -71.3092
-  status: to-hike
 - name: "Mount Tecumseh"
   state: "NH"
   list: "New Hampshire 48"
@@ -667,7 +617,6 @@
   also: "Resurveyed at 3,997 ft in 2019; still on the AMC list"
   lat: 43.9673
   lon: -71.5581
-  status: to-hike
 - name: "Mount Marcy"
   state: "NY"
   list: "Adirondack 46"
@@ -680,7 +629,6 @@
   trail: marked
   lat: 44.1127
   lon: -73.9237
-  status: to-hike
 - name: "Algonquin Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -694,7 +642,6 @@
   also: "Wright Peak is a short side trip"
   lat: 44.1436
   lon: -73.9867
-  status: to-hike
 - name: "Mount Haystack"
   state: "NY"
   list: "Adirondack 46"
@@ -707,7 +654,6 @@
   trail: marked
   lat: 44.1056
   lon: -73.9006
-  status: to-hike
 - name: "Mount Skylight"
   state: "NY"
   list: "Adirondack 46"
@@ -721,7 +667,6 @@
   also: "Usually paired with Marcy"
   lat: 44.0994
   lon: -73.9308
-  status: to-hike
 - name: "Whiteface Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -734,7 +679,6 @@
   trail: marked
   lat: 44.3658
   lon: -73.9028
-  status: to-hike
 - name: "Dix Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -748,7 +692,6 @@
   also: "Hough, South Dix and Grace are on the same range"
   lat: 44.0822
   lon: -73.7864
-  status: to-hike
 - name: "Gray Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -762,7 +705,6 @@
   also: "Often combined with Marcy and Skylight"
   lat: 44.1114
   lon: -73.9349
-  status: to-hike
 - name: "Iroquois Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -776,7 +718,6 @@
   also: "Combined with Algonquin"
   lat: 44.137
   lon: -73.9982
-  status: to-hike
 - name: "Basin Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -790,7 +731,6 @@
   also: "Saddleback and Gothics on the same ridge"
   lat: 44.1212
   lon: -73.8863
-  status: to-hike
 - name: "Gothics"
   state: "NY"
   list: "Adirondack 46"
@@ -803,7 +743,6 @@
   trail: marked
   lat: 44.1281
   lon: -73.8571
-  status: to-hike
 - name: "Mount Colden"
   state: "NY"
   list: "Adirondack 46"
@@ -816,7 +755,6 @@
   trail: marked
   lat: 44.127
   lon: -73.9599
-  status: to-hike
 - name: "Giant Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -829,7 +767,6 @@
   trail: marked
   lat: 44.1611
   lon: -73.7202
-  status: to-hike
 - name: "Nippletop"
   state: "NY"
   list: "Adirondack 46"
@@ -843,7 +780,6 @@
   also: "Dial is nearby"
   lat: 44.0892
   lon: -73.8163
-  status: to-hike
 - name: "Santanoni Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -857,7 +793,6 @@
   also: "Panther is nearby"
   lat: 44.0825
   lon: -74.1312
-  status: to-hike
 - name: "Mount Redfield"
   state: "NY"
   list: "Adirondack 46"
@@ -871,7 +806,6 @@
   also: "Cliff is nearby"
   lat: 44.0948
   lon: -73.9499
-  status: to-hike
 - name: "Wright Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -885,7 +819,6 @@
   also: "Algonquin is nearby"
   lat: 44.1517
   lon: -73.9803
-  status: to-hike
 - name: "Saddleback Mountain (Adirondacks)"
   state: "NY"
   list: "Adirondack 46"
@@ -899,7 +832,6 @@
   also: "Basin and Gothics on the same ridge"
   lat: 44.1267
   lon: -73.8752
-  status: to-hike
 - name: "Panther Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -913,7 +845,6 @@
   also: "Santanoni is nearby"
   lat: 44.0984
   lon: -74.1321
-  status: to-hike
 - name: "Table Top Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -927,7 +858,6 @@
   also: "Phelps is nearby"
   lat: 44.1407
   lon: -73.9163
-  status: to-hike
 - name: "Rocky Peak Ridge"
   state: "NY"
   list: "Adirondack 46"
@@ -941,7 +871,6 @@
   also: "Giant is on the way"
   lat: 44.1544
   lon: -73.7056
-  status: to-hike
 - name: "Macomb Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -954,7 +883,6 @@
   trail: unmarked
   lat: 44.0517
   lon: -73.7801
-  status: to-hike
 - name: "Armstrong Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -968,7 +896,6 @@
   also: "Upper Wolfjaw and Gothics are on the same ridge"
   lat: 44.1348
   lon: -73.849
-  status: to-hike
 - name: "Hough Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -982,7 +909,6 @@
   also: "Dix is the next peak over"
   lat: 44.0695
   lon: -73.7776
-  status: to-hike
 - name: "Seward Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -996,7 +922,6 @@
   also: "Donaldson and Emmons on the same range"
   lat: 44.1597
   lon: -74.1997
-  status: to-hike
 - name: "Mount Marshall"
   state: "NY"
   list: "Adirondack 46"
@@ -1009,7 +934,6 @@
   trail: unmarked
   lat: 44.1275
   lon: -74.0118
-  status: to-hike
 - name: "Allen Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1022,7 +946,6 @@
   trail: unmarked
   lat: 44.0708
   lon: -73.9397
-  status: to-hike
 - name: "Big Slide Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1035,7 +958,6 @@
   trail: marked
   lat: 44.1823
   lon: -73.8704
-  status: to-hike
 - name: "Esther Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1048,7 +970,6 @@
   trail: marked
   lat: 44.387
   lon: -73.8899
-  status: to-hike
 - name: "Upper Wolfjaw Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1062,7 +983,6 @@
   also: "Lower Wolfjaw and Armstrong on the same ridge"
   lat: 44.1405
   lon: -73.8453
-  status: to-hike
 - name: "Lower Wolfjaw Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1076,7 +996,6 @@
   also: "Upper Wolfjaw is the next peak over"
   lat: 44.1484
   lon: -73.8326
-  status: to-hike
 - name: "Street Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1090,7 +1009,6 @@
   also: "Nye is the next peak over"
   lat: 44.1793
   lon: -74.0272
-  status: to-hike
 - name: "Phelps Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1103,7 +1021,6 @@
   trail: marked
   lat: 44.157
   lon: -73.9215
-  status: to-hike
 - name: "Donaldson Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1117,7 +1034,6 @@
   also: "On the Seward Range"
   lat: 44.1539
   lon: -74.211
-  status: to-hike
 - name: "Seymour Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1130,7 +1046,6 @@
   trail: unmarked
   lat: 44.1582
   lon: -74.1727
-  status: to-hike
 - name: "Sawteeth"
   state: "NY"
   list: "Adirondack 46"
@@ -1143,7 +1058,6 @@
   trail: marked
   lat: 44.1133
   lon: -73.8507
-  status: to-hike
 - name: "Cascade Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1157,7 +1071,6 @@
   also: "Porter is nearby"
   lat: 44.2186
   lon: -73.8606
-  status: to-hike
 - name: "South Dix"
   state: "NY"
   list: "Adirondack 46"
@@ -1170,7 +1083,6 @@
   trail: unmarked
   lat: 44.06
   lon: -73.7743
-  status: to-hike
 - name: "Porter Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1184,7 +1096,6 @@
   also: "Cascade is on the way"
   lat: 44.2153
   lon: -73.8436
-  status: to-hike
 - name: "Mount Colvin"
   state: "NY"
   list: "Adirondack 46"
@@ -1198,7 +1109,6 @@
   also: "Blake is nearby"
   lat: 44.0939
   lon: -73.8344
-  status: to-hike
 - name: "Mount Emmons"
   state: "NY"
   list: "Adirondack 46"
@@ -1212,7 +1122,6 @@
   also: "On the Seward Range"
   lat: 44.1437
   lon: -74.214
-  status: to-hike
 - name: "Dial Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1226,7 +1135,6 @@
   also: "Nippletop is nearby"
   lat: 44.1059
   lon: -73.796
-  status: to-hike
 - name: "Grace Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -1240,7 +1148,6 @@
   also: "Also called East Dix"
   lat: 44.0653
   lon: -73.7574
-  status: to-hike
 - name: "Blake Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -1254,7 +1161,6 @@
   also: "Colvin is nearby"
   lat: 44.0814
   lon: -73.8446
-  status: to-hike
 - name: "Cliff Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1268,7 +1174,6 @@
   also: "Redfield is nearby"
   lat: 44.1031
   lon: -73.9751
-  status: to-hike
 - name: "Nye Mountain"
   state: "NY"
   list: "Adirondack 46"
@@ -1282,7 +1187,6 @@
   also: "Street is the next peak over"
   lat: 44.1873
   lon: -74.0238
-  status: to-hike
 - name: "Couchsachraga Peak"
   state: "NY"
   list: "Adirondack 46"
@@ -1296,7 +1200,6 @@
   also: "Santanoni and Panther on the same range"
   lat: 44.0956
   lon: -74.1602
-  status: to-hike
 - name: "Katahdin (Baxter Peak)"
   state: "ME"
   list: "Maine 14"
@@ -1310,7 +1213,6 @@
   also: "Hamlin Peak is across the Knife Edge"
   lat: 45.9044
   lon: -68.9217
-  status: to-hike
 - name: "Hamlin Peak"
   state: "ME"
   list: "Maine 14"
@@ -1324,7 +1226,6 @@
   also: "Katahdin is nearby"
   lat: 45.9212
   lon: -68.9233
-  status: to-hike
 - name: "Sugarloaf Mountain"
   state: "ME"
   list: "Maine 14"
@@ -1337,7 +1238,6 @@
   trail: marked
   lat: 45.0314
   lon: -70.4286
-  status: to-hike
 - name: "Crocker Mountain"
   state: "ME"
   list: "Maine 14"
@@ -1351,7 +1251,6 @@
   also: "South Crocker is on the same ridge"
   lat: 45.0472
   lon: -70.3828
-  status: to-hike
 - name: "Old Speck Mountain"
   state: "ME"
   list: "Maine 14"
@@ -1364,7 +1263,6 @@
   trail: marked
   lat: 44.5712
   lon: -70.9537
-  status: to-hike
 - name: "North Brother"
   state: "ME"
   list: "Maine 14"
@@ -1377,7 +1275,6 @@
   trail: marked
   lat: 45.9573
   lon: -68.9853
-  status: to-hike
 - name: "Bigelow Mountain (West Peak)"
   state: "ME"
   list: "Maine 14"
@@ -1391,7 +1288,6 @@
   also: "Avery Peak is on the same ridge"
   lat: 45.1445
   lon: -70.309
-  status: to-hike
 - name: "Saddleback Mountain (Maine)"
   state: "ME"
   list: "Maine 14"
@@ -1405,7 +1301,6 @@
   also: "The Horn is on the same ridge"
   lat: 44.9367
   lon: -70.5031
-  status: to-hike
 - name: "Bigelow Mountain (Avery Peak)"
   state: "ME"
   list: "Maine 14"
@@ -1419,7 +1314,6 @@
   also: "West Peak is on the same ridge"
   lat: 45.1468
   lon: -70.2879
-  status: to-hike
 - name: "Mount Abraham (Maine)"
   state: "ME"
   list: "Maine 14"
@@ -1432,7 +1326,6 @@
   trail: marked
   lat: 44.973
   lon: -70.3265
-  status: to-hike
 - name: "South Crocker Mountain"
   state: "ME"
   list: "Maine 14"
@@ -1446,7 +1339,6 @@
   also: "Crocker is on the same ridge"
   lat: 45.0362
   lon: -70.3761
-  status: to-hike
 - name: "Saddleback Horn"
   state: "ME"
   list: "Maine 14"
@@ -1460,7 +1352,6 @@
   also: "Saddleback is on the same ridge"
   lat: 44.9513
   lon: -70.4872
-  status: to-hike
 - name: "Mount Redington"
   state: "ME"
   list: "Maine 14"
@@ -1473,7 +1364,6 @@
   trail: unmarked
   lat: 45.025
   lon: -70.3887
-  status: to-hike
 - name: "Spaulding Mountain"
   state: "ME"
   list: "Maine 14"
@@ -1486,7 +1376,6 @@
   trail: unmarked
   lat: 45.003
   lon: -70.3335
-  status: to-hike
 - name: "Mount Mansfield"
   state: "VT"
   list: "Vermont 5"
@@ -1499,7 +1388,6 @@
   trail: marked
   lat: 44.5439
   lon: -72.8143
-  status: to-hike
 - name: "Killington Peak"
   state: "VT"
   list: "Vermont 5"
@@ -1512,7 +1400,6 @@
   trail: marked
   lat: 43.6045
   lon: -72.8201
-  status: to-hike
 - name: "Camel's Hump"
   state: "VT"
   list: "Vermont 5"
@@ -1525,7 +1412,6 @@
   trail: marked
   lat: 44.3189
   lon: -72.8856
-  status: to-hike
 - name: "Mount Ellen"
   state: "VT"
   list: "Vermont 5"
@@ -1539,7 +1425,6 @@
   also: "Abraham is on the Long Trail"
   lat: 44.16
   lon: -72.9289
-  status: to-hike
 - name: "Mount Abraham (Vermont)"
   state: "VT"
   list: "Vermont 5"
@@ -1553,7 +1438,6 @@
   also: "Ellen is on the Long Trail"
   lat: 44.1206
   lon: -72.9361
-  status: to-hike
 - name: "Slide Mountain"
   state: "NY"
   list: "Catskills 2"
@@ -1567,7 +1451,6 @@
   also: "Highest peak in the Catskills"
   lat: 41.9986
   lon: -74.3864
-  status: to-hike
 - name: "Hunter Mountain"
   state: "NY"
   list: "Catskills 2"
@@ -1581,4 +1464,3 @@
   also: "Fire tower on the summit"
   lat: 42.1779
   lon: -74.2304
-  status: to-hike

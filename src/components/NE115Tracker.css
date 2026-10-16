@@ -108,6 +108,11 @@
   border-radius: 50%;
 }
 
+.ne-dot-attempted {
+  background: var(--light-golden-olive);
+  border-color: var(--rosewood);
+}
+
 .ne-dot-hiked {
   background: var(--rosewood);
   border-color: #fff;
@@ -208,14 +213,18 @@
   border-radius: 6px;
 }
 
-.ne-table {
+.ne .ne-table {
+  display: table;
   width: 100%;
-  border-collapse: collapse;
+  margin: 0;
+  overflow: visible;
   font-size: .88rem;
+  line-height: 1.4;
+  border-collapse: collapse;
 }
 
-.ne-table th,
-.ne-table td {
+.ne .ne-table th,
+.ne .ne-table td {
   padding: 6px 8px;
   text-align: left;
   white-space: nowrap;
@@ -224,12 +233,12 @@
 }
 
 /* Park names and routes are long; let them wrap */
-.ne-table td.ne-park {
+.ne .ne-table td.ne-park {
   min-width: 150px;
   white-space: normal;
 }
 
-.ne-table thead th {
+.ne .ne-table thead th {
   position: sticky;
   top: 0;
   z-index: 2;
@@ -238,7 +247,7 @@
   background: var(--chip-background);
 }
 
-.ne-table thead button {
+.ne .ne-table thead button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -254,7 +263,7 @@
   border: 0;
 }
 
-.ne-table thead button:hover {
+.ne .ne-table thead button:hover {
   background: rgba(0, 0, 0, .06);
 }
 
@@ -263,12 +272,12 @@
   opacity: .55;
 }
 
-.ne-table th[aria-sort="ascending"] .ne-arrow,
-.ne-table th[aria-sort="descending"] .ne-arrow {
+.ne .ne-table th[aria-sort="ascending"] .ne-arrow,
+.ne .ne-table th[aria-sort="descending"] .ne-arrow {
   opacity: 1;
 }
 
-.ne-table tbody th {
+.ne .ne-table tbody th {
   position: sticky;
   left: 0;
   z-index: 1;
@@ -277,21 +286,21 @@
   background: var(--surface);
 }
 
-.ne-table tbody tr td {
+.ne .ne-table tbody tr td {
   background: var(--surface);
 }
 
-.ne-table .ne-num {
+.ne .ne-table .ne-num {
   text-align: right;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
-.ne-table thead .ne-num button {
+.ne .ne-table thead .ne-num button {
   flex-direction: row-reverse;
 }
 
-.ne-table small {
+.ne .ne-table small {
   display: block;
   color: var(--text-muted);
   font-size: .85em;
@@ -313,7 +322,7 @@
   text-decoration: underline;
 }
 
-.ne-table small.ne-route {
+.ne .ne-table small.ne-route {
   max-width: 270px;
   white-space: normal;
 }
@@ -328,6 +337,11 @@
 .ne-status-hiked {
   color: #fff;
   background: var(--rosewood);
+}
+
+.ne-status-attempted {
+  color: #3b2e00;
+  background: var(--light-golden-olive);
 }
 
 .ne-status-to-hike {
@@ -379,4 +393,56 @@
   .ne-hint {
     display: block;
   }
+}
+
+.ne .ne-table small.ne-with {
+  max-width: 200px;
+  white-space: normal;
+}
+
+/* ---------- hike log ---------- */
+
+.ne-log-title {
+  margin: 1.6em 0 .6em;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.ne-empty-log {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.ne-log-wrap {
+  max-height: 420px;
+}
+
+.ne-log td {
+  background: var(--surface);
+}
+
+/* The log's headers don't sort, so they have no button to carry the padding */
+.ne-log thead th {
+  padding: 9px 8px;
+  font-weight: 600;
+  color: var(--chip-text);
+}
+
+.ne-log td.ne-log-route {
+  min-width: 260px;
+  white-space: normal;
+}
+
+.ne-log td.ne-log-route strong {
+  display: block;
+}
+
+.ne-log td.ne-log-peaks {
+  min-width: 140px;
+  white-space: normal;
+}
+
+.ne-log-peak {
+  display: block;
+  font-weight: 400;
 }

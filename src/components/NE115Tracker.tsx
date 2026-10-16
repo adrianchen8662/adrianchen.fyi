@@ -1,14 +1,13 @@
-// The Northeast 115 tracker: progress, a topographic map and a sortable, filterable table of the peaks
-// (_data/ne115.yml, read by src/lib/ne115.ts). The table and totals are rendered with the page, so they
+// The Northeast 115 tracker: progress, a topographic map, a sortable, filterable table of the peaks and the log
+// of hikes behind it (_data/ne115.yml and _data/ne115-hikes.yml, read by src/lib/ne115.ts). The table and totals are rendered with the page, so they
 // read fine without JavaScript. Once it runs, the filters and sorting work, and the map loads (Leaflet is
 // only fetched when this is on screen). The map shows exactly the peaks the table shows.
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Map as LeafletMap, CircleMarker, LayerGroup } from 'leaflet';
-import type { Peak } from '../lib/ne115';
+import type { Hike, Peak, Status } from '../lib/ne115';
 import 'leaflet/dist/leaflet.css';
 import './NE115Tracker.css';
 
-type Status = Peak['status'];
 type SortKey = 'name' | 'state' | 'list' | 'park' | 'elevation' | 'miles' | 'gain' | 'trail' | 'status';
 
 interface Column {
@@ -23,8 +22,8 @@ const COLUMNS: Column[] = [
   { key: 'list', label: 'List' },
   { key: 'park', label: 'Park / forest' },
   { key: 'elevation', label: 'Elevation (ft)', numeric: true },
-  { key: 'miles', label: 'Length (mi)', numeric: true },
-  { key: 'gain', label: 'Gain (ft)', numeric: true },
+  { key: 'miles', label: 'Route length (mi)', numeric: true },
+  { key: 'gain', label: 'Route gain (ft)', numeric: true },
   { key: 'trail', label: 'Trail' },
   { key: 'status', label: 'Status' },
 ];
@@ -38,8 +37,8 @@ const formatDate = (iso: string) => dateFormat.format(new Date(`${iso}T00:00:00Z
 const escapeHtml = (text: string) =>
   text.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string);
 
-const statusText = (peak: Peak) =>
-  peak.status === 'hiked' ? (peak.date ? `Hiked ${formatDate(peak.date)}` : 'Hiked') : 'To hike';
+const STATUS_LABEL: Record<Status, string> = { hiked: 'Hiked', attempted: 'Attempted', 'to-hike': 'To hike' };
+const statusText = (peak: Peak) => (peak.date ? `${STATUS_LABEL[peak.status]} ${formatDate(peak.date)}` : STATUS_LABEL[peak.status]);
 
 function compare(a: Peak, b: Peak, key: SortKey): number {
   const x = a[key];
@@ -84,15 +83,21 @@ function popupHtml(peak: Peak): string {
   );
 }
 
+// Hiked: solid dark. Attempted: golden. Still to hike: hollow
+const MARKER_COLORS: Record<Status, { color: string; fillColor: string }> = {
+  hiked: { color: '#fff', fillColor: '#6e332d' },
+  attempted: { color: '#6e332d', fillColor: '#c5a550' },
+  'to-hike': { color: '#983c2e', fillColor: '#fff' },
+};
+
 const markerStyle = (peak: Peak, selected: boolean) => ({
   radius: selected ? 9 : 6,
   weight: selected ? 3 : 2,
-  color: peak.status === 'hiked' ? '#fff' : '#983c2e',
-  fillColor: peak.status === 'hiked' ? '#6e332d' : '#fff',
+  ...MARKER_COLORS[peak.status],
   fillOpacity: 1,
 });
 
-export default function NE115Tracker({ peaks }: { peaks: Peak[] }) {
+export default function NE115Tracker({ peaks, hikes }: { peaks: Peak[]; hikes: Hike[] }) {
   const [filters, setFilters] = useState<Filters>(NO_FILTERS);
   const [sort, setSort] = useState<{ key: SortKey; descending: boolean }>({ key: 'elevation', descending: true });
   const [selected, setSelected] = useState<string | null>(null);
@@ -106,6 +111,7 @@ export default function NE115Tracker({ peaks }: { peaks: Peak[] }) {
 
   const total = peaks.length;
   const hiked = peaks.filter((p) => p.status === 'hiked').length;
+  const attempted = peaks.filter((p) => p.status === 'attempted').length;
 
   const lists = useMemo(() => {
     const names = [...new Set(peaks.map((p) => p.list))];
@@ -206,21 +212,36 @@ export default function NE115Tracker({ peaks }: { peaks: Peak[] }) {
     setSort((s) => (s.key === key ? { key, descending: !s.descending } : { key, descending: key === 'elevation' || key === 'gain' || key === 'miles' }));
 
   const select = (peak: Peak) => {
+    // A peak the filters hide isn't on the map, so show everything first
+    if (!rows.includes(peak)) setFilters(NO_FILTERS);
     selectedFromMap.current = false;
     setSelected(peak.name);
     mapElement.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   };
+
+  const peakButtons = (names: string[]) =>
+    names.length === 0
+      ? '—'
+      : names.map((name) => {
+          const peak = peaks.find((p) => p.name === name);
+          return (
+            <button key={name} type="button" className="ne-peak ne-log-peak" onClick={() => peak && select(peak)} title="Show on the map">
+              {name}
+            </button>
+          );
+        });
 
   return (
     <figure className="diagram ne">
       <figcaption>
         <strong>Northeast 115 tracker</strong>
         <span>
-          {hiked} of {total} peaks hiked. Filter or sort the table, or tap a peak on the map.
+          {hiked} of {total} peaks hiked{attempted > 0 && `, ${attempted} attempted`}. Filter or sort the table, or tap a
+          peak on the map.
         </span>
       </figcaption>
 
-      <div className="ne-progress" role="img" aria-label={`${hiked} of ${total} peaks hiked`}>
+      <div className="ne-progress" role="img" aria-label={`${hiked} of ${total} peaks hiked${attempted > 0 ? `, ${attempted} attempted` : ''}`}>
         <div className="ne-progress-bar">
           <div className="ne-progress-fill" style={{ width: `${(hiked / total) * 100}%` }} />
         </div>
@@ -238,6 +259,9 @@ export default function NE115Tracker({ peaks }: { peaks: Peak[] }) {
         <ul className="ne-legend" aria-label="Map key">
           <li>
             <span className="ne-dot ne-dot-hiked" /> Hiked
+          </li>
+          <li>
+            <span className="ne-dot ne-dot-attempted" /> Attempted
           </li>
           <li>
             <span className="ne-dot" /> To hike
@@ -260,6 +284,7 @@ export default function NE115Tracker({ peaks }: { peaks: Peak[] }) {
           <select value={filters.status} onChange={(e) => setFilter('status', e.target.value as Filters['status'])}>
             <option value="">All</option>
             <option value="hiked">Hiked</option>
+            <option value="attempted">Attempted</option>
             <option value="to-hike">To hike</option>
           </select>
         </label>
@@ -361,8 +386,9 @@ export default function NE115Tracker({ peaks }: { peaks: Peak[] }) {
                 <td className="ne-num">{INTEGER.format(peak.gain)}</td>
                 <td>{peak.trail === 'marked' ? 'Marked' : 'Herd path'}</td>
                 <td>
-                  <span className={`ne-status ne-status-${peak.status}`}>{peak.status === 'hiked' ? 'Hiked' : 'To hike'}</span>
+                  <span className={`ne-status ne-status-${peak.status}`}>{STATUS_LABEL[peak.status]}</span>
                   {peak.date && <small>{formatDate(peak.date)}</small>}
+                  {peak.with.length > 0 && <small className="ne-with">with {peak.with.join(', ')}</small>}
                 </td>
               </tr>
             ))}
@@ -377,9 +403,50 @@ export default function NE115Tracker({ peaks }: { peaks: Peak[] }) {
         </table>
       </div>
       <p className="diagram-note">
-        Lengths are round trip and gain is feet of climbing for one standard route; both are approximate, and routes
-        that share a ridge are listed in full for each peak, so don't add them up.
+        Length and gain in the table are for one standard route, round trip, so there's something to compare against;
+        both are approximate, and peaks that share a ridge repeat the same outing. What I actually hiked is in the log
+        below.
       </p>
+
+      <h3 className="ne-log-title">Hike log</h3>
+      {hikes.length === 0 ? (
+        <p className="ne-empty-log">No hikes logged yet.</p>
+      ) : (
+        <div className="ne-table-wrap ne-log-wrap" tabIndex={0} role="region" aria-label="Hike log">
+          <table className="ne-table ne-log">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Hike</th>
+                <th scope="col" className="ne-num">
+                  Length (mi)
+                </th>
+                <th scope="col" className="ne-num">
+                  Gain (ft)
+                </th>
+                <th scope="col">Summited</th>
+                <th scope="col">Attempted</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[...hikes].reverse().map((hike) => (
+                <tr key={`${hike.date}-${hike.route}`}>
+                  <td>{formatDate(hike.date)}</td>
+                  <td className="ne-log-route">
+                    {hike.title && <strong>{hike.title}</strong>}
+                    {hike.route}
+                    {hike.notes && <small>{hike.notes}</small>}
+                  </td>
+                  <td className="ne-num">{hike.miles ?? '—'}</td>
+                  <td className="ne-num">{hike.gain === undefined ? '—' : INTEGER.format(hike.gain)}</td>
+                  <td className="ne-log-peaks">{peakButtons(hike.summited)}</td>
+                  <td className="ne-log-peaks">{peakButtons(hike.attempted)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </figure>
   );
 }

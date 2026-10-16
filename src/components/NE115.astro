@@ -1,8 +1,8 @@
 ---
-// In a post: <NE115 />. Reads _data/ne115.yml.
-import { loadPeaks } from '../lib/ne115';
+// In a post: <NE115 />. Reads _data/ne115.yml (the peaks) and _data/ne115-hikes.yml (the hike log).
+import { loadNE115 } from '../lib/ne115';
 import NE115Tracker from './NE115Tracker';
 
-const peaks = await loadPeaks();
+const { peaks, hikes } = await loadNE115();
 ---
-<NE115Tracker client:visible peaks={peaks} />
+<NE115Tracker client:visible peaks={peaks} hikes={hikes} />
