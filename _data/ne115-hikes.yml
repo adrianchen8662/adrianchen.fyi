@@ -15,4 +15,31 @@
 #   attempted:                             peaks I set out for and didn't reach
 #     - Mount Zealand
 #   notes: Turned around short of the Zealand summit.   optional
-[]
+# Route names are AllTrails' names for the route; titles are my own.
+- date: 2025-09-13
+  title: Franconia Ridge and Mount Lafayette Trail
+  route: Mount Lafayette and Franconia Ridge Trail Loop
+  miles: 9.8
+  gain: 4009
+  summited:
+    - Mount Lafayette
+    - Mount Lincoln
+
+- date: 2026-06-27
+  title: Mount Hale and Almost Mount Zealand
+  route: Mount Hale and Mount Zealand Loop via Hale Brook to Zealand Trail
+  miles: 13.23
+  gain: 3947
+  summited:
+    - Mount Hale
+  attempted:
+    - Mount Zealand
+
+- date: 2026-10-10
+  title: Whiteface, Lookout and Esther Mountains
+  route: Whiteface, Lookout and Esther Mountains
+  miles: 11.0
+  gain: 3927
+  summited:
+    - Whiteface Mountain
+    - Esther Mountain
