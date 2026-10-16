@@ -19,6 +19,8 @@ npm run preview   # serve the built site from dist/
 | --- | --- |
 | `_posts/<blog>/` | Blog posts, one folder per blog in the Blogs menu |
 | `_data/timeline.yml` | Jobs, schooling and projects for the home page timeline |
+| `_data/ne115.yml` | The 115 peaks, with a standard route for each, for the map and table in the travel post |
+| `_data/ne115-hikes.yml` | The log of hikes behind that post's progress (see [Logging a hike](#logging-a-northeast-115-hike)) |
 | `src/blogs.ts` | The blogs: menu name, page heading and intro |
 | `src/site.ts` | Navigation and profile links |
 | `src/pages/` | One file per page; `[blog]/` builds each blog and its posts |
@@ -45,6 +47,25 @@ The first paragraph is the excerpt in the blog's post list.
 It's published at `/<blog address>/title-of-post/`, where the blog's address is its `slug` in `src/blogs.ts`.
 
 Posts are all rights reserved by default. Add `license: cc0` to a post's front matter to dedicate it to the public domain; the post then carries a CC0 notice.
+
+## Logging a Northeast 115 hike
+
+The map and table in `_posts/travel/2026-10-16-Chasing-The-Northeast-115.mdx` show the peaks in `_data/ne115.yml`. Which ones are hiked comes from the hike log, `_data/ne115-hikes.yml`: add one entry per outing.
+
+```yaml
+- date: 2026-09-12
+  title: Hale and Zealand            # optional
+  route: Lend-a-Hand Trail and Twinway   # what I actually hiked
+  miles: 11.2                        # optional, for the whole hike
+  gain: 3400                         # optional
+  summited: [Mount Hale]
+  attempted: [Mount Zealand]         # set out for, didn't reach
+  notes: Turned around short of the summit.   # optional
+```
+
+A peak is hiked once any hike lists it under `summited`, and attempted if it only ever appears under `attempted`. A hike that covers several peaks lists them all, and its mileage is counted once. Peak names must match `ne115.yml` exactly; the build stops on one it doesn't recognize. The progress bar, counts, map markers and table follow.
+
+The length and gain in `ne115.yml` are for a standard route and are approximate; fix any that are wrong there.
 
 ## Images in posts
 

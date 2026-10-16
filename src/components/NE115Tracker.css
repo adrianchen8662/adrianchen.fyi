@@ -1,0 +1,448 @@
+/* The Northeast 115 tracker. The figure itself uses the site's .diagram card. */
+
+/* The post column is narrow; let the tracker use more of the page on wide screens */
+.ne {
+  position: relative;
+  left: 50%;
+  width: min(1140px, calc(100vw - 32px));
+  transform: translateX(-50%);
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ---------- progress ---------- */
+
+.ne-progress-bar {
+  height: 12px;
+  overflow: hidden;
+  background: var(--chip-background);
+  border-radius: 6px;
+}
+
+.ne-progress-fill {
+  height: 100%;
+  min-width: 0;
+  background: var(--terra-cotta);
+  border-radius: 6px;
+}
+
+.ne-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: .9em;
+}
+
+.ne-lists strong {
+  color: var(--accent-text);
+}
+
+.ne-lists span {
+  color: var(--text-muted);
+}
+
+/* ---------- map ---------- */
+
+.ne-map-frame {
+  position: relative;
+  margin: 18px 0;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ne-map {
+  height: 460px;
+  background: var(--chip-background);
+}
+
+/* Without JavaScript the map never loads; don't leave an empty box */
+.ne-map:empty {
+  height: 120px;
+}
+
+@media (max-width: 619px) {
+  .ne {
+    padding: 14px;
+  }
+
+  .ne-map {
+    height: 340px;
+  }
+}
+
+.ne-legend {
+  position: absolute;
+  right: 10px;
+  bottom: 24px;
+  z-index: 500;
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  padding: 5px 10px;
+  list-style: none;
+  font-size: .85em;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+
+.ne-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ne-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 2px solid var(--terra-cotta);
+  border-radius: 50%;
+}
+
+.ne-dot-attempted {
+  background: var(--light-golden-olive);
+  border-color: var(--rosewood);
+}
+
+.ne-dot-hiked {
+  background: var(--rosewood);
+  border-color: #fff;
+  box-shadow: 0 0 0 1px var(--rosewood);
+}
+
+.ne-popup {
+  display: grid;
+  gap: 2px;
+  min-width: 190px;
+  font: .9rem/1.35 var(--font);
+}
+
+.ne-popup strong {
+  font-size: 1.05em;
+}
+
+.ne-popup-also {
+  color: #666;
+}
+
+.ne-popup em {
+  margin-top: 2px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--terra-cotta);
+}
+
+/* ---------- filters ---------- */
+
+.ne-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px 12px;
+  align-items: end;
+}
+
+.ne-filters .ne-search {
+  grid-column: span 2;
+}
+
+@media (max-width: 619px) {
+  .ne-filters .ne-search {
+    grid-column: 1 / -1;
+  }
+}
+
+.ne-filters label {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  font-size: .85em;
+  color: var(--text-muted);
+}
+
+.ne-filters input,
+.ne-filters select,
+.ne-reset {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 8px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--background);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+}
+
+.ne-reset {
+  width: auto;
+  color: #fff;
+  cursor: pointer;
+  background: var(--rosewood);
+}
+
+.ne-reset:hover:not(:disabled) {
+  background: var(--terra-cotta);
+}
+
+.ne-reset:disabled {
+  cursor: default;
+  opacity: .45;
+}
+
+.ne-count {
+  margin: 14px 0 8px;
+  font-size: .9em;
+  color: var(--text-muted);
+}
+
+/* ---------- table ---------- */
+
+.ne-table-wrap {
+  max-height: 640px;
+  overflow: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+.ne .ne-table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  font-size: .88rem;
+  line-height: 1.4;
+  border-collapse: collapse;
+}
+
+.ne .ne-table th,
+.ne .ne-table td {
+  padding: 6px 8px;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Park names and routes are long; let them wrap */
+.ne .ne-table td.ne-park {
+  min-width: 150px;
+  white-space: normal;
+}
+
+.ne .ne-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 0;
+  white-space: nowrap;
+  background: var(--chip-background);
+}
+
+.ne .ne-table thead button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  padding: 9px 8px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--chip-text);
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.ne .ne-table thead button:hover {
+  background: rgba(0, 0, 0, .06);
+}
+
+.ne-arrow {
+  font-size: .75em;
+  opacity: .55;
+}
+
+.ne .ne-table th[aria-sort="ascending"] .ne-arrow,
+.ne .ne-table th[aria-sort="descending"] .ne-arrow {
+  opacity: 1;
+}
+
+.ne .ne-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 220px;
+  font-weight: 400;
+  background: var(--surface);
+}
+
+.ne .ne-table tbody tr td {
+  background: var(--surface);
+}
+
+.ne .ne-table .ne-num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.ne .ne-table thead .ne-num button {
+  flex-direction: row-reverse;
+}
+
+.ne .ne-table small {
+  display: block;
+  color: var(--text-muted);
+  font-size: .85em;
+}
+
+.ne-peak {
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--link);
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.ne-peak:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.ne .ne-table small.ne-route {
+  max-width: 270px;
+  white-space: normal;
+}
+
+.ne-status {
+  display: inline-block;
+  padding: 1px 8px;
+  white-space: nowrap;
+  border-radius: 10px;
+}
+
+.ne-status-hiked {
+  color: #fff;
+  background: var(--rosewood);
+}
+
+.ne-status-attempted {
+  color: #3b2e00;
+  background: var(--light-golden-olive);
+}
+
+.ne-status-to-hike {
+  color: var(--text-muted);
+  border: 1px solid var(--rule);
+}
+
+.ne-selected th,
+.ne-selected td {
+  background: var(--chip-background) !important;
+}
+
+.ne-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+:focus-visible.ne-table-wrap,
+.ne-table-wrap:focus-visible {
+  outline: 2px solid var(--moss-green);
+  outline-offset: 2px;
+}
+
+/* The map and its popups stay light in either theme, so they keep their own text color */
+.leaflet-container {
+  font-family: var(--font);
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  color: #333;
+  background: #fff;
+}
+
+.leaflet-container a {
+  color: var(--terra-cotta);
+}
+
+/* Shown only where the table is likely to need sideways scrolling */
+.ne-hint {
+  display: none;
+  margin: 0 0 8px;
+  font-size: .85em;
+  color: var(--text-muted);
+}
+
+@media (max-width: 899px) {
+  .ne-hint {
+    display: block;
+  }
+}
+
+.ne .ne-table small.ne-with {
+  max-width: 200px;
+  white-space: normal;
+}
+
+/* ---------- hike log ---------- */
+
+.ne-log-title {
+  margin: 1.6em 0 .6em;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.ne-empty-log {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.ne-log-wrap {
+  max-height: 420px;
+}
+
+.ne-log td {
+  background: var(--surface);
+}
+
+/* The log's headers don't sort, so they have no button to carry the padding */
+.ne-log thead th {
+  padding: 9px 8px;
+  font-weight: 600;
+  color: var(--chip-text);
+}
+
+.ne-log td.ne-log-route {
+  min-width: 260px;
+  white-space: normal;
+}
+
+.ne-log td.ne-log-route strong {
+  display: block;
+}
+
+.ne-log td.ne-log-peaks {
+  min-width: 140px;
+  white-space: normal;
+}
+
+.ne-log-peak {
+  display: block;
+  font-weight: 400;
+}
