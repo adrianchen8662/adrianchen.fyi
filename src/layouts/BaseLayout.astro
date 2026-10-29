@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import SiteNav from '../components/SiteNav';
+import SiteNav from '../components/SiteNav.astro';
 import Footer from '../components/Footer.astro';
 import { GA_MEASUREMENT_ID, NAV, SITE } from '../site';
 
@@ -79,7 +79,7 @@ const analyticsHost = Astro.site?.hostname;
     <header class="site-header">
       <div class="container">
         <a class="wordmark" href="/">{SITE.name}</a>
-        <SiteNav client:load items={NAV} currentPath={Astro.url.pathname} />
+        <SiteNav items={NAV} currentPath={Astro.url.pathname} />
       </div>
     </header>
     <main>

@@ -1,0 +1,62 @@
+---
+interface Props {
+  /** Text that stays put, e.g. "Hi, I'm Adrian Chen. I'm" */
+  prefix: string;
+  /** Endings typed and deleted in turn, each with its own "a" or "an" */
+  phrases: string[];
+}
+
+const { prefix, phrases } = Astro.props;
+const spoken = `${prefix} ${phrases.map((p) => p.replace(/\.$/, '')).join(', ')}.`;
+---
+<!-- Starts with the first phrase in full, so the page reads correctly before the script runs -->
+<h1 data-typewriter data-phrases={JSON.stringify(phrases)}>
+  <span class="sr-only">{spoken}</span>
+  <span aria-hidden="true">{prefix} <span data-typed>{phrases[0]}</span><span class="caret"></span></span>
+</h1>
+
+<script>
+  /** Types each phrase after the prefix, then deletes it and moves on to the next */
+  const heading = document.querySelector<HTMLElement>('[data-typewriter]');
+  const typed = heading?.querySelector('[data-typed]');
+
+  if (heading && typed) {
+    const phrases: string[] = JSON.parse(heading.dataset.phrases!);
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    let part = 0;
+    let length = phrases[0].length;
+    let deleting = false;
+
+    const next = () => {
+      if (reducedMotion.matches) return;
+
+      const phrase = phrases[part];
+      let delay: number;
+      let step: () => void;
+      if (!deleting) {
+        if (length < phrase.length) {
+          delay = 100;
+          step = () => length++;
+        } else {
+          delay = 1000;
+          step = () => (deleting = true);
+        }
+      } else if (length > 0) {
+        delay = 50;
+        step = () => length--;
+      } else {
+        delay = 200;
+        step = () => {
+          part = (part + 1) % phrases.length;
+          deleting = false;
+        };
+      }
+      setTimeout(() => {
+        step();
+        typed.textContent = phrases[part].slice(0, length);
+        next();
+      }, delay);
+    };
+    next();
+  }
+</script>
