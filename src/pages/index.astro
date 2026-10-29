@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Timeline from '../components/Timeline.astro';
-import Typewriter from '../components/Typewriter';
+import Typewriter from '../components/Typewriter.astro';
 ---
 <BaseLayout description="Software Engineer at ASRC Federal and Computer Science master's student at NJIT">
   <section class="hero">
     <Typewriter
-      client:load
       prefix="Hi, I'm Adrian Chen. I'm"
       phrases={[
         'a Software Engineer.',
