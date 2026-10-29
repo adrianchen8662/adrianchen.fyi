@@ -42,17 +42,30 @@ const analyticsHost = Astro.site?.hostname;
     <link rel="sitemap" href="/sitemap-index.xml" />
     {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     {GA_MEASUREMENT_ID && analyticsHost && (
-      <>
-        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
-        <script is:inline define:vars={{ gaId: GA_MEASUREMENT_ID, gaHost: analyticsHost }}>
-          // Google tag. Loading it sends nothing; hits only start once it's configured, and that only happens on
-          // the site's own address, so previews, workers.dev and local runs don't count.
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
+      <script is:inline define:vars={{ gaId: GA_MEASUREMENT_ID, gaHost: analyticsHost }}>
+        // Google tag. It only runs on the site's own address, so previews, workers.dev and local runs don't count.
+        // The tag itself is large (about 180 kB), so it's fetched once the visitor first interacts, or after
+        // 10 seconds, instead of competing with the page for the main thread while it loads. What the page does
+        // before then is queued in dataLayer and sent when the tag arrives, so a visit that interacts or stays
+        // is counted in full; one that leaves sooner without touching the page isn't.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        if (location.hostname === gaHost) {
           gtag('js', new Date());
-          if (location.hostname === gaHost) gtag('config', gaId);
-        </script>
-      </>
+          gtag('config', gaId);
+          const events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+          const load = () => {
+            events.forEach((event) => removeEventListener(event, load));
+            clearTimeout(timer);
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+            document.head.append(script);
+          };
+          const timer = setTimeout(load, 10000);
+          events.forEach((event) => addEventListener(event, load, { passive: true }));
+        }
+      </script>
     )}
     <script is:inline>
       // Apply a theme picked with the header switch before the page paints

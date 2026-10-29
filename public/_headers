@@ -1,4 +1,10 @@
 # Cloudflare applies these to the files it serves (see wrangler.jsonc).
+
 # The RSS feed is for feed readers, not search results; Search Console otherwise lists it as crawled but not indexed.
 /feed.xml
   X-Robots-Tag: noindex
+
+# Everything in /_astro/ has a hash in its name that changes whenever the file does, so browsers can keep it for good.
+# (Cloudflare's default makes them re-check on every visit.)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

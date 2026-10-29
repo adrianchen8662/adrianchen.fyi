@@ -168,7 +168,9 @@ The site is at https://adrianchen.fyi. Cloudflare builds it from this repository
 
 `www.adrianchen.fyi` isn't served by the Worker; a Cloudflare Redirect Rule forwards it to the main address (dashboard → the domain → Rules → Redirect Rules, from the "Redirect from WWW to root" template, 301, query string kept), and it needs a proxied `AAAA` record for `www` pointing at `100::` so there's something for the rule to catch. The template only matches `https://`, so the domain's **Always Use HTTPS** setting (SSL/TLS → Edge Certificates) needs to be on for `http://www` links to reach it. Those settings live in Cloudflare, not in this repository.
 
-Google Analytics is the tag in `src/layouts/BaseLayout.astro`, with its measurement ID in `src/site.ts`; it only sends data from the site's own address.
+Google Analytics is the tag in `src/layouts/BaseLayout.astro`, with its measurement ID in `src/site.ts`; it only sends data from the site's own address. The tag is large, so it's fetched when a visitor first interacts (or after 10 seconds) rather than while the page loads; a visit that leaves sooner without touching the page isn't counted.
+
+Files in `public/_headers` set response headers on Cloudflare: long-lived caching for the hashed files in `/_astro/`, and `noindex` for the RSS feed.
 
 ## License
 
