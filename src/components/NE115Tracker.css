@@ -1,10 +1,10 @@
 /* The Northeast 115 tracker. The figure itself uses the site's .diagram card. */
 
-/* The post column is narrow; let the tracker use more of the page on wide screens */
+/* The post column is narrow; let the tracker break out of it and use most of the page on wide screens */
 .ne {
   position: relative;
   left: 50%;
-  width: min(1140px, calc(100vw - 32px));
+  width: min(1560px, calc(100vw - 48px));
   transform: translateX(-50%);
   padding: 20px;
   font-size: 1rem;
