@@ -11,7 +11,8 @@ export function getStaticPaths() {
 const { blog } = Astro.props as { blog: Blog };
 const posts = await getPosts(blog.id);
 ---
-<PageLayout title={blog.title} descriptionHtml={blog.description}>
+<!-- A blog with no posts yet is a nearly empty page; it stays out of search results (and the sitemap) until it has one -->
+<PageLayout title={blog.title} descriptionHtml={blog.description} noindex={posts.length === 0}>
   <div class="blog-index">
     <PostList posts={posts} />
   </div>
