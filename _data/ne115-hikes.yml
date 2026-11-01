@@ -43,3 +43,19 @@
   summited:
     - Whiteface Mountain
     - Esther Mountain
+
+- date: 2026-10-31
+  title: Hunter Mountain via Spruceton Trail
+  route: Hunter Mountain via Spruceton Trail
+  miles: 7.06
+  gain: 1914
+  summited:
+    - Hunter Mountain
+
+- date: 2026-10-31
+  title: Slide Mountain
+  route: Slide Mountain Out-and-Back
+  miles: 2.63
+  gain: 894
+  attempted:
+    - Slide Mountain
